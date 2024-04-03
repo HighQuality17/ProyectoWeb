@@ -28,3 +28,15 @@ Route::get('/shop', function () {
 Route::get('/shop-single', function () {
     return view('shop-single');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
