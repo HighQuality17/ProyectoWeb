@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <title>E-Shop</title>
+=======
+    <title>E-Shoes ¡Todo tipo de calazado!</title>
+>>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -65,12 +69,23 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
+<<<<<<< HEAD
                                 <h1 class="h1 text-success"><b><E-shop></E-shop></b> E-Shop</h1>
                                 <h3 class="h2">Descubre la moda para tus pies en nuestra colección de zapatos</h3>
                                 <p>
                                     En E-shop Explora nuestra amplia gama de estilos, materiales y colores para encontrar el complemento ideal para tu estilo único.
                                      Con una combinación de calidad, estilo y comodidad. 
                                     
+=======
+                                <h1 class="h1 text-success"><b>E-Shoes</b> ¡Encuentra todo tipo de calzado!</h1>
+                                <h3 class="h2">Tenemos tus marcas favoritas</h3>
+                                <p>
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">Nike</a>,
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">Adidas</a>,
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">Rebook</a>,
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">New Balance</a>,
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">Tommy Hilfiger</a>.
+>>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
                                 </p>
                             </div>
                         </div>
@@ -81,16 +96,22 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_02.jpg" alt="">
+                            <img class="img-fluid" src="./assets/img/banner_img_02.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
+<<<<<<< HEAD
                                 <h1 class="h1">Elegancia</h1>
                                 <h3 class="h2">Estamos aquí para satisfacer tus necesidades de calzado y elevar tu look a otro nivel.</h3>
                                 <p>
                                 Desde clásicos mocasines hasta modernos tacones de aguja, cada par emana una sensación de refinamiento y distinción.  
                                   
                                 </p>
+=======
+                                <h1 class="h1">Nueva Colección</h1>
+                                <h3 class="h2">¡Encuentra aqui las tendencias del momento!</h3><br>
+                                <p class="text-center"><a class="btn btn-success">Comprar</a></p>
+>>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
                             </div>
                         </div>
                     </div>
@@ -100,16 +121,24 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_03.jpg" alt="">
+                            <img class="img-fluid" src="./assets/img/banner_img_03.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
+<<<<<<< HEAD
                                 <h1 class="h1">Comodidad</h1>
                                 <h3 class="h2">Los zapatos cómodos son el equilibrio perfecto entre estilo y bienestar.</h3>
                                 <p>
                                 Disponibles en una variedad de estilos y diseños, los zapatos cómodos son la elección perfecta para aquellos que buscan un
                                  calzado que se adapte a su ritmo de vida activo y sin complicaciones.
+=======
+                                <h1 class="h1">Tu estilo es <strong>UNICO</strong></h1>
+                                <h3 class="h2">!En E-Shoes encuentras todo lo que te gusta!</h3>
+                                <p>
+                                    Tenemos la mejor calidad de calzado, para todo tipo de gustos y estilos :).
+>>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
                                 </p>
+                                <p class="text-center"><a class="btn btn-success">Ver Categorias</a></p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +159,11 @@ https://templatemo.com/tm-559-zay-shop
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
+<<<<<<< HEAD
                 <h1 class="h1">Categorias Disponibles</h1>
+=======
+                <h1 class="h1">Categorías del mes</h1>
+>>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
                 <p>
                 Descubre nuestra amplia selección de zapatos cuidadosamente
                  organizados en diversas categorías para satisfacer tus necesidades de estilo y comodidad.
