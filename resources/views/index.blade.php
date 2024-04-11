@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <title>E-Shop</title>
-=======
-    <title>E-Shoes ¡Todo tipo de calazado!</title>
->>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
+    <title>E-Shoes ¡Todo tipo de calzado!</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -69,14 +66,6 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-<<<<<<< HEAD
-                                <h1 class="h1 text-success"><b><E-shop></E-shop></b> E-Shop</h1>
-                                <h3 class="h2">Descubre la moda para tus pies en nuestra colección de zapatos</h3>
-                                <p>
-                                    En E-shop Explora nuestra amplia gama de estilos, materiales y colores para encontrar el complemento ideal para tu estilo único.
-                                     Con una combinación de calidad, estilo y comodidad. 
-                                    
-=======
                                 <h1 class="h1 text-success"><b>E-Shoes</b> ¡Encuentra todo tipo de calzado!</h1>
                                 <h3 class="h2">Tenemos tus marcas favoritas</h3>
                                 <p>
@@ -85,7 +74,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <a rel="sponsored" class="text-success" href="" target="_blank">Rebook</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">New Balance</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">Tommy Hilfiger</a>.
->>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
+
                                 </p>
                             </div>
                         </div>
@@ -100,18 +89,10 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-<<<<<<< HEAD
-                                <h1 class="h1">Elegancia</h1>
-                                <h3 class="h2">Estamos aquí para satisfacer tus necesidades de calzado y elevar tu look a otro nivel.</h3>
-                                <p>
-                                Desde clásicos mocasines hasta modernos tacones de aguja, cada par emana una sensación de refinamiento y distinción.  
-                                  
-                                </p>
-=======
                                 <h1 class="h1">Nueva Colección</h1>
                                 <h3 class="h2">¡Encuentra aqui las tendencias del momento!</h3><br>
                                 <p class="text-center"><a class="btn btn-success">Comprar</a></p>
->>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
+
                             </div>
                         </div>
                     </div>
@@ -125,18 +106,12 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-<<<<<<< HEAD
-                                <h1 class="h1">Comodidad</h1>
-                                <h3 class="h2">Los zapatos cómodos son el equilibrio perfecto entre estilo y bienestar.</h3>
-                                <p>
-                                Disponibles en una variedad de estilos y diseños, los zapatos cómodos son la elección perfecta para aquellos que buscan un
-                                 calzado que se adapte a su ritmo de vida activo y sin complicaciones.
-=======
+
+
                                 <h1 class="h1">Tu estilo es <strong>UNICO</strong></h1>
                                 <h3 class="h2">!En E-Shoes encuentras todo lo que te gusta!</h3>
                                 <p>
-                                    Tenemos la mejor calidad de calzado, para todo tipo de gustos y estilos :).
->>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
+                                    Tenemos la mejor calidad de calzado, para todo tipo de gustos y estilos.
                                 </p>
                                 <p class="text-center"><a class="btn btn-success">Ver Categorias</a></p>
                             </div>
@@ -159,11 +134,9 @@ https://templatemo.com/tm-559-zay-shop
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-<<<<<<< HEAD
+
                 <h1 class="h1">Categorias Disponibles</h1>
-=======
-                <h1 class="h1">Categorías del mes</h1>
->>>>>>> 5ca932c8f3fd53ae6b516838a3ca758aee6744e2
+
                 <p>
                 Descubre nuestra amplia selección de zapatos cuidadosamente
                  organizados en diversas categorías para satisfacer tus necesidades de estilo y comodidad.
@@ -195,10 +168,9 @@ https://templatemo.com/tm-559-zay-shop
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Featured Product</h1>
+                    <h1 class="h1">Productos destacados</h1>
                     <p>
-                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident.
+                        ¡Aqui podrás encontrar los productos más destacados de nuestra página!
                     </p>
                 </div>
             </div>
@@ -217,11 +189,11 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-muted fa fa-star"></i>
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">$240.00</li>
+                                <li class="text-muted text-right">COP120.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Samba</a>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            Esta silueta se mantiene fiel a su legado con un discreto y elegante exterior de cuero suave.
                             </p>
                             <p class="text-muted">Reviews (24)</p>
                         </div>
@@ -241,11 +213,11 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-muted fa fa-star"></i>
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">$480.00</li>
+                                <li class="text-muted text-right">COP210.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Supernova</a>
                             <p class="card-text">
-                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
+                            Ofrece el equilibrio perfecto entre comodidad y soporte para mantenerte cómodo kilómetro tras kilómetro.
                             </p>
                             <p class="text-muted">Reviews (48)</p>
                         </div>
@@ -265,13 +237,13 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-warning fa fa-star"></i>
                                     <i class="text-warning fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">$360.00</li>
+                                <li class="text-muted text-right">COP180.000</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Nike Blazer</a>
                             <p class="card-text">
-                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
+                            El Nike Blazer Mid '77 Vintage: un clásico desde el inicio.
                             </p>
-                            <p class="text-muted">Reviews (74)</p>
+                            <p class="text-muted">Reviews (15)</p>
                         </div>
                     </div>
                 </div>
