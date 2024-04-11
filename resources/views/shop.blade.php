@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <title>Zay Shop - Product Listing Page</title>
+    <title>E-Shoes - Pagina de productos listados</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,37 +54,44 @@ https://templatemo.com/tm-559-zay-shop
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">Categories</h1>
+                <h1 class="h2 pb-4">Categorías</h1>
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Gender
+                            Genero
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Men</a></li>
-                            <li><a class="text-decoration-none" href="#">Women</a></li>
+                            <li><a class="text-decoration-none" href="#">Hombre</a></li>
+                            <li><a class="text-decoration-none" href="#">Mujer</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Sale
+                            Tipo
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Sport</a></li>
                             <li><a class="text-decoration-none" href="#">Luxury</a></li>
+                            <li><a class="text-decoration-none" href="#">Deportivo</a></li>
+                            <li><a class="text-decoration-none" href="#">Casual</a></li>
+                            <li><a class="text-decoration-none" href="#">Elegante</a></li>
+                            <li><a class="text-decoration-none" href="#">Para niño</a></li>
+                            <li><a class="text-decoration-none" href="#">Para niña</a></li>
+                            <li><a class="text-decoration-none" href="#">Guayos</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Product
+                            Marca
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Bag</a></li>
-                            <li><a class="text-decoration-none" href="#">Sweather</a></li>
-                            <li><a class="text-decoration-none" href="#">Sunglass</a></li>
+                            <li><a class="text-decoration-none" href="#">Nike</a></li>
+                            <li><a class="text-decoration-none" href="#">Adidas</a></li>
+                            <li><a class="text-decoration-none" href="#">Rebook</a></li>
+                            <li><a class="text-decoration-none" href="#">New Balance</a></li>
+                            <li><a class="text-decoration-none" href="#">Skechers</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -95,22 +102,22 @@ https://templatemo.com/tm-559-zay-shop
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Todo</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Hombres</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+                                <a class="h3 text-dark text-decoration-none" href="#">Mujeres</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 pb-4">
                         <div class="d-flex">
                             <select class="form-control">
-                                <option>Featured</option>
-                                <option>A to Z</option>
-                                <option>Item</option>
+                                <option>Destacados</option>
+                                <option>Precio - menor a mayor</option>
+                                <option>Precio - mayor a menor</option>
                             </select>
                         </div>
                     </div>
@@ -119,7 +126,7 @@ https://templatemo.com/tm-559-zay-shop
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Air_Jordan_Mid_SE_1.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single"><i class="far fa-heart"></i></a></li>
@@ -129,9 +136,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Air Jordan 1 Mid SE</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                    <li>Tallas:</li>
+                                    <li>36/37/38/39/42</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -145,11 +153,11 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-warning fa fa-star"></i>
                                         <i class="text-warning fa fa-star"></i>
                                         <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP $587.960</p>
                             </div>
                         </div>
                     </div>
@@ -474,7 +482,7 @@ https://templatemo.com/tm-559-zay-shop
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
+                    <h1 class="h1">Nuestras Marcas</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         Lorem ipsum dolor sit amet.

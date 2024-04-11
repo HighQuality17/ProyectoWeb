@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <title>E-Shoes ¡Todo tipo de calzado!</title>
@@ -39,7 +39,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <form action="" method="get" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Buscar ...">
                     <button type="submit" class="input-group-text bg-success text-light">
                         <i class="fa fa-fw fa-search text-white"></i>
                     </button>
@@ -62,7 +62,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_01.jpg" alt="">
+                            <img class="img-fluid" src="./assets/img/banner_img_01.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
@@ -73,7 +73,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <a rel="sponsored" class="text-success" href="" target="_blank">Adidas</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">Rebook</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">New Balance</a>,
-                                    <a rel="sponsored" class="text-success" href="" target="_blank">Tommy Hilfiger</a>.
+                                    <a rel="sponsored" class="text-success" href="" target="_blank">y muchas mas...</a>,
 
                                 </p>
                             </div>
