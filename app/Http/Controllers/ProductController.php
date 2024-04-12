@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index()
     {
-    
+        $products = Product::all(); 
+        return view('products.index',compact('products'));  
     }
 
     public function create()
@@ -18,7 +20,13 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+        $product->name = $request->product_name;
+        $product->price = $request->product_price;
+
+        $product->stock = $request->product_stock;
+        $product->save();
+        return redirect()->route('products.index');
     }
 
     public function show(string $id)
