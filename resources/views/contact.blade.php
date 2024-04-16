@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Contact</title>
+    <title>Contacto E-Shoes</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,10 +54,9 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Content Page -->
     <div class="container-fluid bg-light py-5">
         <div class="col-md-6 m-auto text-center">
-            <h1 class="h1">Contact Us</h1>
+            <h1 class="h1">Contáctanos</h1>
             <p>
-                Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet.
+               Deja tus datos en la parte inferior y nos pondremos en contacto contigo por medio de correo electrónico.
             </p>
         </div>
     </div>
@@ -79,7 +78,7 @@ https://templatemo.com/tm-559-zay-shop
         }).addTo(mymap);
 
         L.marker([-23.013104, -43.394365, 13]).addTo(mymap)
-            .bindPopup("<b>Zay</b> eCommerce Template<br />Location.").openPopup();
+            .bindPopup("<b>E-Shoes</b>.").openPopup();
 
         mymap.scrollWheelZoom.disable();
         mymap.touchZoom.disable();
@@ -92,8 +91,8 @@ https://templatemo.com/tm-559-zay-shop
             <form class="col-md-9 m-auto" method="post" role="form">
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
-                        <label for="inputname">Name</label>
-                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name">
+                        <label for="inputname">Nombre</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
                     </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputemail">Email</label>
@@ -101,16 +100,16 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputsubject">Subject</label>
-                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject">
+                    <label for="inputsubject">Descripción</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Descripción">
                 </div>
                 <div class="mb-3">
-                    <label for="inputmessage">Message</label>
-                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Message" rows="8"></textarea>
+                    <label for="inputmessage">Mensaje</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensaje" rows="8"></textarea>
                 </div>
                 <div class="row">
                     <div class="col text-end mt-2">
-                        <button type="submit" class="btn btn-success btn-lg px-3">Let’s Talk</button>
+                        <button type="submit" class="btn btn-success btn-lg px-3">Conversemos</button>
                     </div>
                 </div>
             </form>
