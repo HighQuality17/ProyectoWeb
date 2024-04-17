@@ -158,45 +158,46 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">Active Wear</h1>
-                            <p class="h3 py-2">$25.00</p>
+                            <h1 class="h2">Nike Blazer</h1>
+                            <p class="h3 py-2">COP 180.000</p>
                             <p class="py-2">
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                                <span class="list-inline-item text-dark">Rating 4.8 | 6 Comments</span>
                             </p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <h6>Brand:</h6>
+                                    <h6>Marca:</h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Easy Wear</strong></p>
+                                    <p class="text-muted"><strong>Nike</strong></p>
                                 </li>
                             </ul>
 
-                            <h6>Description:</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
+                            <h6>Descripción:</h6>
+                            <p>El Nike Blazer Mid '77 ofrece un diseño atemporal fácil de usar. La parte superior de cuero increíblemente impecable se amolda a la perfección y combina con la marca retro llamativa
+                                 y con los toques exquisitos de gamuza para proporcionar una sensación premium.</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <h6>Avaliable Color :</h6>
+                                    <h6>Colores disponibles:</h6>
                                 </li>
                                 <li class="list-inline-item">
                                     <p class="text-muted"><strong>White / Black</strong></p>
                                 </li>
                             </ul>
 
-                            <h6>Specification:</h6>
+                            <h6>Especificaciones:</h6>
                             <ul class="list-unstyled pb-3">
-                                <li>Lorem ipsum dolor sit</li>
-                                <li>Amet, consectetur</li>
-                                <li>Adipiscing elit,set</li>
-                                <li>Duis aute irure</li>
-                                <li>Ut enim ad minim</li>
-                                <li>Dolore magna aliqua</li>
-                                <li>Excepteur sint</li>
+                                <li>Parte superior sintética y de cuero</li>
+                                <li>La entresuela añade el toque retro perfecto</li>
+                                <li>Espuma expuesta en la lengüeta</li>
+                                <li>Suela de goma maciza</li>
+                                <li>Excelente tracción</li>
+                                <li>Blanco/Vela/Melocotón/Negro</li>
+                                <li>Estilo: CZ1055-100</li>
                             </ul>
 
                             <form action="" method="GET">
@@ -204,19 +205,19 @@ https://templatemo.com/tm-559-zay-shop
                                 <div class="row">
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
-                                            <li class="list-inline-item">Size :
+                                            <li class="list-inline-item">Talla :
                                                 <input type="hidden" name="product-size" id="product-size" value="S">
                                             </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">S</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">M</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">L</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">XL</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">36</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">38</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">39</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">42</span></li>
                                         </ul>
                                     </div>
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
-                                                Quantity
+                                                Cantidad:
                                                 <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                             </li>
                                             <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
@@ -227,10 +228,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Buy</button>
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Agregar al carritp</button>
                                     </div>
                                 </div>
                             </form>
@@ -247,7 +248,7 @@ https://templatemo.com/tm-559-zay-shop
     <section class="py-5">
         <div class="container">
             <div class="row text-left p-2 pb-3">
-                <h4>Related Products</h4>
+                <h4>Productos recomendados</h4>
             </div>
 
             <!--Start Carousel Wrapper-->
@@ -266,9 +267,10 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Red Clothing</a>
+                            <a href="shop-single.html" class="h3 text-decoration-none">Nike M2K tekno</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -286,7 +288,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0">$20.00</p>
+                            <p class="text-center mb-0">COP 310.000</p>
                         </div>
                     </div>
                 </div>
@@ -304,9 +306,10 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">White Shirt</a>
+                            <a href="shop-single.html" class="h3 text-decoration-none">Adidas Campus</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -324,7 +327,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0">$25.00</p>
+                            <p class="text-center mb-0">COP 280.000</p>
                         </div>
                     </div>
                 </div>
@@ -342,9 +345,10 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                            <a href="shop-single.html" class="h3 text-decoration-none">Adidas Superstar</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -362,7 +366,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-warning fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0">$45.00</p>
+                            <p class="text-center mb-0">COP 260.000</p>
                         </div>
                     </div>
                 </div>
@@ -380,9 +384,10 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Black Fashion</a>
+                            <a href="shop-single.html" class="h3 text-decoration-none">Nike Blazer Mid 77'</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -400,7 +405,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0">$60.00</p>
+                            <p class="text-center mb-0">COP 560.000</p>
                         </div>
                     </div>
                 </div>
@@ -420,7 +425,8 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card-body">
                             <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li class="">M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -458,7 +464,8 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card-body">
                             <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                            <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>

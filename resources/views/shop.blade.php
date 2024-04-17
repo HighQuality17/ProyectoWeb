@@ -58,7 +58,7 @@ https://templatemo.com/tm-559-zay-shop
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Genero
+                            Género
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
@@ -72,13 +72,11 @@ https://templatemo.com/tm-559-zay-shop
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Luxury</a></li>
+                            
                             <li><a class="text-decoration-none" href="#">Deportivo</a></li>
                             <li><a class="text-decoration-none" href="#">Casual</a></li>
                             <li><a class="text-decoration-none" href="#">Elegante</a></li>
-                            <li><a class="text-decoration-none" href="#">Para niño</a></li>
-                            <li><a class="text-decoration-none" href="#">Para niña</a></li>
-                            <li><a class="text-decoration-none" href="#">Guayos</a></li>
+                    
                         </ul>
                     </li>
                     <li class="pb-3">
@@ -157,7 +155,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-warning fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">COP $587.960</p>
+                                <p class="text-center mb-0">COP 587.960</p>
                             </div>
                         </div>
                     </div>
@@ -174,9 +172,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Adidas Samba</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39/42</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -194,7 +193,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 120.000</p>
                             </div>
                         </div>
                     </div>
@@ -211,9 +210,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Adidas Supernova</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39/42</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -231,7 +231,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 210.000</p>
                             </div>
                         </div>
                     </div>
@@ -248,9 +248,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Nike Blazer</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39/42</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -268,7 +269,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 180.000</p>
                             </div>
                         </div>
                     </div>
@@ -285,9 +286,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Sandalias Negras H&M</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -305,7 +307,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 110.000</p>
                             </div>
                         </div>
                     </div>
@@ -322,9 +324,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Botas Negras H&M</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -342,7 +345,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 150.000</p>
                             </div>
                         </div>
                     </div>
@@ -359,9 +362,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Air Jordan 1 Mid</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -379,7 +383,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 499.000</p>
                             </div>
                         </div>
                     </div>
@@ -396,9 +400,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Nike M2K tekno</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -416,7 +421,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 310.000</p>
                             </div>
                         </div>
                     </div>
@@ -433,9 +438,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Adidas Campus</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                <li>Tallas:</li>
+                                    <li>36/37/38/39</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -453,7 +459,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">COP 280.000</p>
                             </div>
                         </div>
                     </div>
@@ -484,8 +490,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-lg-6 m-auto">
                     <h1 class="h1">Nuestras Marcas</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
+                    Las marcas más deseadas en el mercado del calzado, encuentra tu favorita.
                     </p>
                 </div>
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
