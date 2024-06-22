@@ -10,7 +10,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all(); 
-        return view('products.index',compact('products'));  
+        return view('products.index', compact('products'));
     }
 
     public function create()
@@ -36,20 +36,23 @@ class ProductController extends Controller
         return view('products.show', compact('product'));
     }
 
-    public function edit(Product $product)
+    public function edit($id)
     {
-        return view('products.show', compact('product'));
+        $product = Product::findOrFail($id);
+        return view('products.edit', compact('product'));
     }
 
     public function update(Request $request, Product $product)
     {
-        $product = new Product();
-        $product->name = $request->product_name;
-        $product->price = $request->product_price;
-
-        $product->stock = $request->product_stock;
-        $product->save();
-        return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'stock' => 'required|integer',
+        ]);
+    
+        $product->update($request->all());
+    
+        return redirect()->route('products.index')->with('success', 'Producto actualizado exitosamente.');
     }
     
 
@@ -58,4 +61,7 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
     }
+
+
+  
 }

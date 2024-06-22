@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <title>E-Shoes ¡Todo tipo de calzado!</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,17 +15,8 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
 </head>
-
 <body>
-
     <!-- Invoque Header -->
     @include('header')
 
@@ -47,8 +36,6 @@ https://templatemo.com/tm-559-zay-shop
             </form>
         </div>
     </div>
-
-
 
     <!-- Start Banner Hero -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -74,13 +61,15 @@ https://templatemo.com/tm-559-zay-shop
                                     <a rel="sponsored" class="text-success" href="" target="_blank">Rebook</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">New Balance</a>,
                                     <a rel="sponsored" class="text-success" href="" target="_blank">y muchas mas...</a>,
-
                                 </p>
+                                <!-- Button to view products -->
+                                <p class="text-center"><a href="{{ route('products.index') }}" class="btn btn-success">Ver Productos</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Remaining carousel items -->
             <div class="carousel-item">
                 <div class="container">
                     <div class="row p-5">
@@ -90,9 +79,8 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
                                 <h1 class="h1">Nueva Colección</h1>
-                                <h3 class="h2">¡Encuentra aqui las tendencias del momento!</h3><br>
+                                <h3 class="h2">¡Encuentra aqui las tendencias del momento!</h3>
                                 <p class="text-center"><a class="btn btn-success">Comprar</a></p>
-
                             </div>
                         </div>
                     </div>
@@ -106,8 +94,6 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-
-
                                 <h1 class="h1">Tu estilo es <strong>UNICO</strong></h1>
                                 <h3 class="h2">!En E-Shoes encuentras todo lo que te gusta!</h3>
                                 <p>
@@ -129,17 +115,14 @@ https://templatemo.com/tm-559-zay-shop
     </div>
     <!-- End Banner Hero -->
 
-
     <!-- Start Categories of The Month -->
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-
                 <h1 class="h1">Categorias Disponibles</h1>
-
                 <p>
-                Descubre nuestra amplia selección de zapatos cuidadosamente
-                 organizados en diversas categorías para satisfacer tus necesidades de estilo y comodidad.
+                    Descubre nuestra amplia selección de zapatos cuidadosamente organizados en diversas categorías para satisfacer tus necesidades de estilo y comodidad.
+                </p>
             </div>
         </div>
         <div class="row">
@@ -160,8 +143,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
         </div>
     </section>
-    <!-- End Categories of The Month -->0
-
+    <!-- End Categories of The Month -->
 
     <!-- Start Featured Product -->
     <section class="bg-light">
@@ -193,7 +175,7 @@ https://templatemo.com/tm-559-zay-shop
                             </ul>
                             <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Samba</a>
                             <p class="card-text">
-                            Esta silueta se mantiene fiel a su legado con un discreto y elegante exterior de cuero suave.
+                                Esta silueta se mantiene fiel a su legado con un discreto y elegante exterior de cuero suave.
                             </p>
                             <p class="text-muted">Reviews (24)</p>
                         </div>
@@ -217,7 +199,7 @@ https://templatemo.com/tm-559-zay-shop
                             </ul>
                             <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Supernova</a>
                             <p class="card-text">
-                            Ofrece el equilibrio perfecto entre comodidad y soporte para mantenerte cómodo kilómetro tras kilómetro.
+                                Ofrece el equilibrio perfecto entre comodidad y soporte para mantenerte cómodo kilómetro tras kilómetro.
                             </p>
                             <p class="text-muted">Reviews (48)</p>
                         </div>
@@ -241,7 +223,7 @@ https://templatemo.com/tm-559-zay-shop
                             </ul>
                             <a href="shop-single.html" class="h2 text-decoration-none text-dark">Nike Blazer</a>
                             <p class="card-text">
-                            El Nike Blazer Mid '77 Vintage: un clásico desde el inicio.
+                                El Nike Blazer Mid '77 Vintage: un clásico desde el inicio.
                             </p>
                             <p class="text-muted">Reviews (15)</p>
                         </div>
@@ -263,5 +245,4 @@ https://templatemo.com/tm-559-zay-shop
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <!-- End Script -->
 </body>
-
 </html>

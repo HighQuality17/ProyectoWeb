@@ -3,10 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Role;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 
 class User extends Authenticatable
 {
@@ -17,6 +21,14 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+     
+     public function roles()
+     {
+         return $this->belongsToMany(Role::class, 'user_roles', 'user_id', 'role_id');
+     }
+
+
     protected $fillable = [
         'name',
         'email',
@@ -41,4 +53,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }
