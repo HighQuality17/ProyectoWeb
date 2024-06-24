@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class Product_Controller extends Controller
 {
     public function index()
     {
@@ -32,7 +32,7 @@ class ProductController extends Controller
         $product->size = $request->product_size;
         $product->color = $request->product_color;
         $product->save();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
     }
 
     public function show(string $id)
@@ -62,7 +62,7 @@ class ProductController extends Controller
         $product->size = $request->product_size;
         $product->color = $request->product_color;
         $product->save();
-        return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
+        return redirect()->route('products.index')->with('success', 'Producto actualizado correctamente.');
     }
 
     public function destroy(string $id)
@@ -70,6 +70,6 @@ class ProductController extends Controller
         //Para eliminar un registro en la base de datos
         $product = Product::find($id);
         $product->delete();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
     }
 }
