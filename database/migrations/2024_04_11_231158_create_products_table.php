@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('size');
             $table->string('color');
             $table->timestamps();
+
         });
     }
 
