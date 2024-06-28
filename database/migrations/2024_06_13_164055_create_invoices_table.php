@@ -12,12 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('invoices', function (Blueprint $table) {
-            $table->id();
-            $table->string('invoice_number');
+            $table->id('invoice_number');
+            $table->unsignedBigInteger('user_id');
             $table->string('invoice_date');
             $table->string('total_amount');
             $table->string('dispatch_date');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

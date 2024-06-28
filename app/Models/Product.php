@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'price', 'stock'];
+    
+    public function invoices()
+    {
+        return $this->belongsToMany(Invoice::class)->withPivot('quantity', 'subtotal');
+    }
 }
