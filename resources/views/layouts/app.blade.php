@@ -78,7 +78,7 @@
         </nav>
 
         <main class="py-4">
-            @yield('content') {{-- Aquí se mostrará el contenido dinámico de cada vista --}}
+            @yield('content')
         </main>
     </div>
 

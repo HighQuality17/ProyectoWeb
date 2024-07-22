@@ -24,11 +24,20 @@ class ProductController extends Controller
            
         $product = new Product();
         $product->name = $request->product_name;
+        $product->line = $request->product_line;
+        $product->description = $request->product_description;
         $product->price = $request->product_price;
-
+        $product->weight = $request->product_weight;
         $product->stock = $request->product_stock;
+
+        $product->guarantee = $request->product_guarantee;
+        $product->brand = $request->product_brand;
+        $product->size = $request->product_size;
+        $product->color = $request->product_color;
         $product->save();
         return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
+
+    
     }
 
     public function show(Product $product)
@@ -46,11 +55,20 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'price' => 'required|numeric',
-            'stock' => 'required|integer',
+            'line' => 'required',
+            'description' => 'required',
+            'price' => 'required|integer',
+            'weight' => 'required|integer',
+            'stock' => 'required|numeric',
+            'guarantee' => 'required|numeric',
+            'brand' => 'required',
+            'size' => 'required|numeric',
+            'color' => 'required',
+
         ]);
-    
+        
         $product->update($request->all());
+        
     
         return redirect()->route('products.index')->with('success', 'Producto actualizado exitosamente.');
     }
