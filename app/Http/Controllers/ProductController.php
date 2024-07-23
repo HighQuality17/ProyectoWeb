@@ -52,26 +52,35 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, Product $product)
-    {
-        $request->validate([
-            'name' => 'required',
-            'line' => 'required',
-            'description' => 'required',
-            'price' => 'required|integer',
-            'weight' => 'required|integer',
-            'stock' => 'required|numeric',
-            'guarantee' => 'required|numeric',
-            'brand' => 'required',
-            'size' => 'required|numeric',
-            'color' => 'required',
+{
+    $request->validate([
+        'name' => 'required',
+        'line' => 'required',
+        'description' => 'required',
+        'price' => 'required|integer',
+        'weight' => 'required|integer',
+        'stock' => 'required|integer',
+        'guarantee' => 'required|integer',
+        'brand' => 'required',
+        'size' => 'required|integer',
+        'color' => 'required',
+    ]);
 
-        ]);
-        
-        $product->update($request->all());
-        
-    
-        return redirect()->route('products.index')->with('success', 'Producto actualizado exitosamente.');
-    }
+    $product->update([
+        'name' => $request->name,
+        'line' => $request->line,
+        'description' => $request->description,
+        'price' => $request->price,
+        'weight' => $request->weight,
+        'stock' => $request->stock,
+        'guarantee' => $request->guarantee,
+        'brand' => $request->brand,
+        'size' => $request->size,
+        'color' => $request->color,
+    ]);
+
+    return redirect()->route('products.index')->with('success', 'Producto actualizado correctamente.');
+}
     
 
     public function destroy(Product $product)

@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <h1>Editar Producto</h1>
-        <form action="{{ route('products.update', $product) }}" method="POST">
+        <form action="{{ route('products.update', $product->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -14,26 +14,26 @@
             </div>
             <div class="mb-3">
                 <label for="line" class="form-label">Linea</label>
-                <input type="text" step="0.01" name="line" class="form-control" id="line" value="{{ $product->line}}" required>
+                <input type="text" name="line" class="form-control" id="line" value="{{ $product->line }}" required>
             </div>
             <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripcion</label>
-                <input type="text" name="description" class="form-control" id="description" value="{{ $product->stock }}" required>
+                <label for="description" class="form-label">Descripción</label>
+                <textarea name="description" class="form-control" id="description" required>{{ $product->description }}</textarea>
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Precio</label>
                 <input type="number" name="price" class="form-control" id="price" value="{{ $product->price }}" required>
             </div>
             <div class="mb-3">
-                <label for="peso" class="form-label">Peso</label>
-                <input type="number" name="peso" class="form-control" id="peso" value="{{ $product->weight }}" required>
+                <label for="weight" class="form-label">Peso</label>
+                <input type="number" name="weight" class="form-control" id="weight" value="{{ $product->weight }}" required>
             </div>
             <div class="mb-3">
                 <label for="stock" class="form-label">Stock</label>
                 <input type="number" name="stock" class="form-control" id="stock" value="{{ $product->stock }}" required>
             </div>
             <div class="mb-3">
-                <label for="guarantee" class="form-label">Garantia</label>
+                <label for="guarantee" class="form-label">Garantía</label>
                 <input type="number" name="guarantee" class="form-control" id="guarantee" value="{{ $product->guarantee }}" required>
             </div>
             <div class="mb-3">
@@ -48,7 +48,6 @@
                 <label for="color" class="form-label">Color</label>
                 <input type="text" name="color" class="form-control" id="color" value="{{ $product->color }}" required>
             </div>
-
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
         </form>
     </div>

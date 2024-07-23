@@ -13,4 +13,17 @@ class Product extends Model
     {
         return $this->belongsToMany(Invoice::class)->withPivot('quantity', 'subtotal');
     }
+
+    protected $fillable = [
+        'name',
+        'line',
+        'description',
+        'price',
+        'weight',
+        'stock',
+        'guarantee',
+        'brand',
+        'size',
+        'color',
+    ];
 }
