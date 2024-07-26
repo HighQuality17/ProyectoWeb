@@ -3,13 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UsersController;
 
-
+Route::post('/registro_usuarios', UsersController::class, 'store');
 
 Route::get('/', function () {
     
     return view('index');
 });
+
+
 
 Route::resource('products', ProductController::class);
 

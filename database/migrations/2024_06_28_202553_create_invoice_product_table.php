@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('subtotal');
             $table->timestamps();
 
-            $table->foreignId('invoice_id')->nullable()->constrained('invoices')->cascadeOnUpdate()->nullonDelete();
-            $table->foreignId('product_id')->nullable()->constrained('products  ')->cascadeOnUpdate()->nullonDelete();
+            $table->foreign('invoice_id')->nullable()->constrained('invoices')->cascadeOnUpdate()->nullonDelete();
+            $table->foreign('product_id')->nullable()->constrained('products')->cascadeOnUpdate()->nullonDelete();
         });
     }
 
