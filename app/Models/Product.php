@@ -26,4 +26,18 @@ class Product extends Model
         'size',
         'color',
     ];
+
+    // Relación con el modelo SaleProduct
+    public function saleProducts()
+    {
+        return $this->hasMany(InvoiceProduct::class);
+    }
+
+    // Relación con el modelo Invoice a través de InvoiceProduct
+    public function sales()
+    {
+        return $this->belongsToMany(Invoice::class, 'invoice_product')
+                    ->withPivot('quantity', 'subtotal')
+                    ->withTimestamps();
+    }
 }

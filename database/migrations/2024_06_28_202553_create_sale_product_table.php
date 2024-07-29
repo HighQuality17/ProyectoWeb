@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
 {
-    Schema::create('invoice_product', function (Blueprint $table) {
+    Schema::create('sale_product', function (Blueprint $table) {
         $table->id();
-        $table->unsignedBigInteger('invoice_id');
+        $table->unsignedBigInteger('sale_id');
         $table->unsignedBigInteger('product_id');
         $table->string('quantity');
         $table->string('subtotal');
         $table->timestamps();
 
-        // Foreign keys
-        $table->foreign('invoice_id')->references('id')->on('invoices')->onUpdate('cascade')->onDelete('cascade');
+        // Llaves foraneas
+        $table->foreign('sale_id')->references('id')->on('sales')->onUpdate('cascade')->onDelete('cascade');
         $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
     });
 }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('sale_product');
     }
 };

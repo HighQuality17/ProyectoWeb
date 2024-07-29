@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class UsersController extends Controller
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,16 +27,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-        $user->nombre = $request->name;
-        $user->email = $request->email;
-        $user->cedula = $request->idcard;
-        $user->telefono = $request->phone;
-        $user->contraseña = $request->password;
-
-
-        $user->save();
-        return view('login');
+        //
     }
 
     /**
@@ -62,11 +52,6 @@ class UsersController extends Controller
     public function update(Request $request, string $id)
     {
         //
-    }
-
-    public function __invoke(Request $request)
-    {
-        // Lógica del controlador
     }
 
     /**

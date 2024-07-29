@@ -28,6 +28,11 @@ class User extends Authenticatable
          return $this->belongsToMany(Role::class, 'user_roles', 'user_id', 'role_id');
      }
 
+     public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
 
     protected $fillable = [
         'name',
