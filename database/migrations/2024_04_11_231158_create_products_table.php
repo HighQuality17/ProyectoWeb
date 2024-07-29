@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('line');
-            $table->string('description');
-            $table->string('price');
-            $table->string('weight');
-            $table->string('stock');
+            $table->text('description');
+            $table->decimal('price');
+            $table->decimal('weight');
+            $table->integer('stock');
             $table->string('guarantee');
             $table->string('brand');
-            $table->string('size');
+            $table->decimal('size');
             $table->string('color');
             $table->timestamps();
 

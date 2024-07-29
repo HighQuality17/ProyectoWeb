@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('sale_date');
-            $table->string('total_amount');
-            $table->string('dispatch_date');
+            $table->date('sale_date');
+            $table->decimal('total_amount');
+            $table->date('dispatch_date');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

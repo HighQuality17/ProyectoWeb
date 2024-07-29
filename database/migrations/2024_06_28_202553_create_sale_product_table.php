@@ -15,8 +15,8 @@ return new class extends Migration
         $table->id();
         $table->unsignedBigInteger('sale_id');
         $table->unsignedBigInteger('product_id');
-        $table->string('quantity');
-        $table->string('subtotal');
+        $table->integer('quantity');
+        $table->decimal('subtotal');
         $table->timestamps();
 
         // Llaves foraneas
