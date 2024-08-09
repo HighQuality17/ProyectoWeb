@@ -4,42 +4,31 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HomeController;
 
-Route::post('/registro_usuarios', UsersController::class, 'store');
+// Ruta para registrar usuarios (store method)
+Route::post('/registro_usuarios', [UsersController::class, 'store']);
 
+// Ruta para la página principal
 Route::get('/', function () {
-    
     return view('index');
 });
 
-
-
+// Rutas RESTful para productos
 Route::resource('products', ProductController::class);
 
+// Rutas RESTful para usuarios
+Route::resource('users', UsersController::class);
+
+// Autenticación
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Ruta para el dashboard después de iniciar sesión
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
-
-Route::get('/shop', function () {
-    return view('shop');
-});
-
-Route::get('/shop-single', function () {
-    return view('shop-single');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
+// Rutas para páginas estáticas
+Route::view('/shop', 'shop')->name('shop');
+Route::view('/shop-single', 'shop-single')->name('shop.single');
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
 
