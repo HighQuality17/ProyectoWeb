@@ -3,7 +3,7 @@ Joni Alexander Cuartas Pineda    C.C: 1053866737
 Veronica Rendon Florez           C.C: 1114952117
 
 Link del documento:
-https://docs.google.com/document/d/1KLm8XGDAhpPhJOBBHpHAw5kF0bS2rzNtJwJlvQL3oaI/edit#heading=h.prtjiy9w28kr
+https://docs.google.com/document/d/1sk5D42d6XTTUi45-j5iL5SHvvouGUgUa/edit
 
 
 
