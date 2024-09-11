@@ -25,11 +25,11 @@
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Productos</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         
-                        <li><a class="text-decoration-none" href="#">Calzado Deportivo</a></li>
-                        <li><a class="text-decoration-none" href="#">Calzado para Hombre</a></li>
-                        <li><a class="text-decoration-none" href="#">Calzado para Mujer</a></li>
-                        <li><a class="text-decoration-none" href="#">Calzado Casual</a></li>
-                        <li><a class="text-decoration-none" href="#">Calzado Elegante</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('shop') }}">Calzado Deportivo</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('shop') }}">Calzado para Hombre</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('shop') }}">Calzado para Mujer</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('shop') }}">Calzado Casual</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('shop') }}">Calzado Elegante</a></li>
                         
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
                 <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <input type="text" class="form-control bg-php_strip_whitespace border-light" id="subscribeEmail" placeholder="Email address">
                         <div class="input-group-text btn-success text-light">Suscribete!</div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
+                            Copyright &copy; 2024 E-Shoes 
                             | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
                         </p>
                     </div>
