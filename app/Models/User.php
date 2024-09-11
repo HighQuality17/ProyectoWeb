@@ -33,6 +33,11 @@ class User extends Authenticatable
         return $this->hasMany(Address::class);
     }
 
+    public function sales()
+    {
+        return $this->hasMany(Sale::class);  // Relación con el modelo Sale
+    }
+
 
     protected $fillable = [
         'name',

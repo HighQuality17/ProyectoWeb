@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class invoice extends Model
+class Sale extends Model
 {
     use HasFactory;
 
@@ -28,5 +28,10 @@ class invoice extends Model
         return $this->belongsToMany(Product::class, 'invoice_product')
                     ->withPivot('quantity', 'subtotal')
                     ->withTimestamps();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
