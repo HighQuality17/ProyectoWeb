@@ -17,6 +17,7 @@
                         <li><strong>Email:</strong> {{ Auth::user()->email }}</li>
                         <li><strong>Teléfono:</strong> {{ Auth::user()->phone ?? 'No proporcionado' }}</li>
                     </ul>
+                    <a href="{{ route('profile.edit') }}" class="btn btn-primary mt-3">Editar Información</a>
                 </div>
             </div>
         </div>

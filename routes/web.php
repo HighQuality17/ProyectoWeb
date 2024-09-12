@@ -35,9 +35,14 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Ruta para la vista de perfil de usuario
 route::get('/home', [UserProfileController::class, 'home'])->name('home');
 
+route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
+
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');
 Route::view('/shop-single', 'shop-single')->name('shop.single');
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
+
+
 

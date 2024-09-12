@@ -89,7 +89,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-6">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Registrate!') }}
                                 </button>
                             </div>

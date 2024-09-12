@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card shadow-lg p-3 mb-5 bg-body rounded">
-                <div class="card-header text-center bg-primary text-white">
+                <div class="card-header text-center bg-success text-white">
                     <h4>{{ __('Iniciar Sesión') }}</h4>
                     <p>Si ya tienes una cuenta con nosotros, inicia sesión</p>
                 </div>
@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button type="submit" class="btn btn-lg btn-primary">
+                            <button type="submit" class="btn btn-lg btn-success">
                                 {{ __('Iniciar Sesión') }}
                             </button>
                         </div>

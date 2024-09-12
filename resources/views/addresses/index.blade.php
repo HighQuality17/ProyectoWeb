@@ -48,5 +48,9 @@
 
         <a href="{{ route('addresses.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Añadir nueva dirección</a>
     @endif
+
+    <div class="mt-4">
+        <a href="{{ route('home') }}" class="btn btn-secondary">Volver a tu perfil</a>
+    </div>
 </div>
 @endsection

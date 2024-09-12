@@ -47,6 +47,7 @@
             <button type="submit" class="bg-blue-500 text-black px-4 py-2 rounded hover:bg-blue-600">Actualizar Dirección</button>
             <a href="{{ route('addresses.index') }}" class="text-gray-600 hover:underline">Cancelar</a>
         </div>
+        
     </form>
 </div>
 @endsection

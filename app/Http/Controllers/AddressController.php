@@ -15,7 +15,7 @@ class AddressController extends Controller
     public function index()
     {
         // Obtener todas las direcciones de la base de datos
-        $addresses = Address::all();
+        $addresses = Address::where('user_id', auth()->id())->get();
         return view('addresses.index', compact('addresses'));
     }
 
