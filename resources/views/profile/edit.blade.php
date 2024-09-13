@@ -1,14 +1,19 @@
-<!-- resources/views/profile/edit.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
 <div class="container mt-5">
     <h1 class="mb-4">Editar Información Personal</h1>
 
+    <!-- Mostrar mensaje de éxito -->
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <form method="post" action="{{ route('profile.update') }}">
         @csrf
-        @method('patch')
+        @method('PATCH')
 
         <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
@@ -36,15 +41,8 @@
 
         <div class="d-flex justify-content-between align-items-center">
             <button type="submit" class="btn btn-primary">Guardar</button>
-
-            <a href="{{ route('home') }}" class="btn btn-secondary">Volver a tu perfil</a>
+            <a href="{{ route('profile.home') }}" class="btn btn-secondary">Volver a tu perfil</a>
         </div>
-
-        @if (session('status') === 'profile-updated')
-            <div class="text-success mt-3">
-                {{ __('Perfil actualizado.') }}
-            </div>
-        @endif
     </form>
 </div>
 @endsection

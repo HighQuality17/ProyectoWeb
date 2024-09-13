@@ -4,6 +4,14 @@
 <div class="container mx-auto mt-8">
     <h2 class="text-2xl font-bold mb-4">Editar Dirección</h2>
 
+    <!-- Mostrar mensaje de éxito -->
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <!-- Mostrar errores de validación -->
     @if ($errors->any())
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             <ul>

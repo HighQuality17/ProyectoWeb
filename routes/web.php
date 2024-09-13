@@ -8,6 +8,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ReportController;
 
 // Ruta para registrar usuarios (store method)
 Route::post('/registro_usuarios', [UsersController::class, 'store']);
@@ -30,13 +33,29 @@ Route::resource('sales', SalesController::class);
 Auth::routes();
 route::get('/addresses/create', [AddressController::class, 'create'])->name('addresses.create');
 
-// Ruta para el dashboard después de iniciar sesión
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-// Ruta para la vista de perfil de usuario
-route::get('/home', [UserProfileController::class, 'home'])->name('home');
+// Ruta para el dashboard 
+Route::get('/home', [HomeController::class, 'index'])->name('index');
 
-route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
-Route::post('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
+// ruta para el rol de Cliente
+Route::middleware(['checkrole:2'])->group(function () {
+    Route::get('/profile/home', [ClientController::class, 'home'])->name('profile.home');
+    
+});
+// Rutas para Clientes
+Route::middleware(['cliente'])->group(function () {
+    route::get('/profile/home', [UserProfileController::class, 'home'])->name('profile.home');
+    Route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
+    Route::resource('addresses', AddressController::class);
+});
+
+// ruta para el rol de Administrador
+Route::middleware(['checkrole:1'])->group(function () {
+    Route::get('/admin/index', [AdminController::class, 'home'])->name('admin.index');
+});
+
+// ruta para el reporte de ventas
+Route::get('/reports/sales', [ReportController::class, 'sales'])->name('reports.sales');
 
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');

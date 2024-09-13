@@ -13,13 +13,20 @@ class UserProfileController extends Controller
     }
 
     public function home()
-    {
-        $user = Auth::user();
-        $addresses = $user->addresses;
-        $sales = $user->sales; // Asegúrate de tener una relación en el modelo User para pedidos
+{
+    $user = Auth::user();
 
-        return view('home', compact('addresses', 'sales'));
+    // Verificar si el usuario es administrador
+    if ($user->role === 'Administrador') {
+        return redirect()->route('admin.index');  // Redirige a la vista del administrador
     }
+
+    // Si no es administrador, mostrar la vista del perfil de usuario
+    $addresses = $user->addresses;
+    $sales = $user->sales;
+
+    return view('/profile/home', compact('addresses', 'sales'));
+}
 
     public function edit()
     {
@@ -32,19 +39,21 @@ class UserProfileController extends Controller
 
     public function update(Request $request)
     {
+        $userId = Auth::id(); // Obtener el ID del usuario autenticado
         // Validar los datos del formulario
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . Auth::id(),
+            'email' => 'required|string|email|max:255|unique:users,email,' . $userId,
             'phone' => 'nullable|string|max:20',
         ]);
 
         // Actualizar la información del usuario autenticado
         $user = Auth::user();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->save();
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]);
 
         // Redirigir con mensaje de éxito
         return redirect()->route('profile.edit')->with('success', 'Información actualizada correctamente');

@@ -63,7 +63,7 @@
                                     <a rel="sponsored" class="text-success" href="" target="_blank">y muchas mas...</a>,
                                 </p>
                                 <!-- Button to view products -->
-                                <p class="text-center"><a href="{{ route('products.index') }}" class="btn btn-success">Ver Productos</a></p>
+                                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Ver Productos</a></p>
                             </div>
                         </div>
                     </div>
