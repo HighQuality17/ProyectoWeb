@@ -9,14 +9,13 @@ class Address extends Model
 {
     use HasFactory;
 
-    // Definir los campos que pueden ser llenados de manera masiva
     protected $fillable = [
         'department',
         'city',
         'neighborhood',
         'address_line1',
         'address_line2',
-        'user_id', // Asegúrate de incluir 'user_id' aquí
+        'user_id', 
     ];
 
     // Definir la relación con el modelo User

@@ -54,8 +54,9 @@ Route::middleware(['checkrole:1'])->group(function () {
     Route::get('/admin/index', [AdminController::class, 'home'])->name('admin.index');
 });
 
-// ruta para el reporte de ventas
-Route::get('/reports/sales', [ReportController::class, 'sales'])->name('reports.sales');
+// rutas para el reporte de ventas
+Route::get('/report/sales/pdf', [ReportController::class, 'generateSalesReportPDF']);
+Route::get('/report/products/pdf', [ReportController::class, 'generateProductReportPDF']);
 
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');

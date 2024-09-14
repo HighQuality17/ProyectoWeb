@@ -3,13 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Sale; // Asegúrate de tener un modelo Sale
+use App\Models\Sale; 
+use PDF;
+use App\Models\Product; 
+
 
 class ReportController extends Controller
 {
-    public function sales()
+    public function generateSalesReportPDF()
     {
-        $sales = Sale::all(); // Obtener todas las ventas, puedes filtrar o ajustar según tus necesidades
-        return view('reports.sales', compact('sales'));
+        
+        $sales = Sale::all();
+        $pdf = PDF::loadView('reports.sales_pdf', compact('sales'));
+        return $pdf->download('reporte_ventas.pdf');
+    }
+
+    public function generateProductReportPDF()
+    {
+        $products = Product::all();
+        $pdf = PDF::loadView('reports.product_pdf', compact('products'));
+        return $pdf->download('reporte_productos.pdf');
     }
 }
