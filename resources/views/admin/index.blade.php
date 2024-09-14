@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h2 class="card-title h4">Gestión de Productos</h2>
                     <p class="card-text">Administra los productos disponibles en la tienda.</p>
-                    <a href="{{ route('products.index') }}" class="btn btn-primary">Ver Productos</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-success">Ver Productos</a>
                     <a href="{{ route('products.create') }}" class="btn btn-success ml-2">Añadir Producto</a>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <h2 class="card-title h4">Generación de Reportes</h2>
                     <p class="card-text">Genera reportes detallados sobre ventas, devoluciones y otros datos importantes.</p>
-                    <a href="{{ route('reports.sales') }}" class="btn btn-primary">Reporte de Ventas</a>
+                    <a href="{{ route('reports.sales') }}" class="btn btn-success">Reporte de Ventas</a>
                 </div>
             </div>
         </div>

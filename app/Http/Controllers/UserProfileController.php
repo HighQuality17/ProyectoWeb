@@ -56,6 +56,13 @@ class UserProfileController extends Controller
         ]);
 
         // Redirigir con mensaje de éxito
-        return redirect()->route('profile.edit')->with('success', 'Información actualizada correctamente');
+        return redirect()->route('profile.home')->with('success', 'Información actualizada correctamente');
+    }
+
+    public function salesHistory()
+    {
+        $user = Auth::user();
+        $sales = $user->sales; // Obtener ventas si aplica
+        return view('sales.index', compact('sales'));
     }
 }

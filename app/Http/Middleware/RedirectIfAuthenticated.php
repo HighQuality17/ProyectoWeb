@@ -21,11 +21,17 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                // Redirigir a la vista de creación de direcciones
-                return redirect()->route('addresses.create');
+                $user = Auth::guard($guard)->user();
+
+                // Verificar el role_id del usuario y redirigir según corresponda
+                if ($user->role_id === 1) {
+                    return redirect()->route('admin.index');  // Redirige a la vista del administrador
+                } elseif ($user->role_id === 0) {
+                    return redirect()->route('profile.home');  // Redirige a la vista del cliente
+                }
             }
         }
 
-        return $next($request);
+    return $next($request);
     }
 }

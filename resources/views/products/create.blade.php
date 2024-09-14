@@ -50,9 +50,11 @@
                 <div class="form-group">
                     <label for="product_color">Color</label>
                     <input type="text" name="product_color" class="form-control" required>
-                </div>
+                </div><br>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
+            <br>
+            <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
         </div>
     </div>
 </div>

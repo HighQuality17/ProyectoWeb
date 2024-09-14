@@ -1,9 +1,3 @@
-<!-- resources/views/products/index.blade.php -->
-
-<!-- resources/views/products/index.blade.php -->
-
-<!-- resources/views/products/index.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
@@ -40,5 +34,6 @@
                 @endforeach
             </tbody>
         </table>
+        <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
     </div>
 @endsection

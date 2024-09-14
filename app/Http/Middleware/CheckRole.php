@@ -16,8 +16,14 @@ class CheckRole
      */
     public function handle(Request $request, Closure $next, $roleId)
     {
-        // Si el usuario no está autenticado o su role_id no coincide, se bloquea el acceso
-        if (!Auth::check() || Auth::user()->role_id != $roleId) {
+        if (!Auth::check()) {
+            // Si no está autenticado, redirige al login
+            return redirect('/login');
+        }
+
+        // Verifica si el usuario tiene el rol adecuado
+        if (Auth::user()->role_id != $roleId) {
+            // Retorna un 403 si el rol no coincide
             abort(403, 'Acceso denegado.');
         }
 

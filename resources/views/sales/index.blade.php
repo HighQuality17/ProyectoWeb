@@ -35,7 +35,7 @@
         <p>No tienes pedidos realizados.</p>
     @endif
     <div class="mt-4">
-        <a href="{{ route('home') }}" class="btn btn-secondary">Volver a tu perfil</a>
+        <a href="{{ route('profile.home') }}" class="btn btn-success">Volver a tu perfil</a>
     </div>
 </div>
 @endsection
