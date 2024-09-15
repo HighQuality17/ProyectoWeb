@@ -22,8 +22,9 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h2 class="card-title h4">Generación de Reportes</h2>
-                    <p class="card-text">Genera reportes detallados sobre ventas, devoluciones y otros datos importantes.</p>
+                    <p class="card-text">Genera reportes detallados sobre ventas y productos.</p>
                     <a href="{{ route('reports.sales') }}" class="btn btn-success">Reporte de Ventas</a>
+                    <a href="{{ route('reports.products') }}" class="btn btn-success">Reporte de Productos</a>
                 </div>
             </div>
         </div>

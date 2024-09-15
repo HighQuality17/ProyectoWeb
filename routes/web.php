@@ -10,6 +10,7 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\MapController;
 
 // Página principal
 Route::get('/', function () {
@@ -43,10 +44,18 @@ Route::middleware('auth')->group(function () {
 
     // Rutas para generar reportes
     Route::prefix('report')->group(function () {
-        Route::get('/sales/pdf', [ReportController::class, 'generateSalesReportPDF'])->name('reports.sales');
-        Route::get('/products/pdf', [ReportController::class, 'generateProductReportPDF'])->name('reports.products');
+        Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
+        Route::post('reports/generate', [ReportController::class, 'generate'])->name('reports.generate');
+        Route::get('/sales/pdf', [ReportController::class, 'generateSalesReportPDF'])->name('reports.sales_pdf');
+        Route::get('/products/pdf', [ReportController::class, 'generateProductReportPDF'])->name('reports.products_pdf');
     });
 });
+
+// Ruta para mostrar el mapa
+Route::get('/contact', [MapController::class, 'showMap'])->name('contact');
+
+// Ruta para manejar solicitudes del mapa
+Route::post('/contact', [MapController::class, 'handleMapRequest'])->name('contact.submit');
 
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');

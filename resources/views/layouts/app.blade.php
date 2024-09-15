@@ -59,15 +59,27 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <!-- Opción para Direcciones -->
-                                    <a class="dropdown-item" href="{{ route('addresses.index') }}">
-                                        {{ __('Mis Direcciones') }}
-                                    </a>
+                                    @if (Auth::user()->role_id == 2)
+                                        <!-- Opción para Direcciones -->
+                                        <a class="dropdown-item" href="{{ route('addresses.index') }}">
+                                            {{ __('Mis Direcciones') }}
+                                        </a>
 
-                                    <!-- Opción para Pedidos -->
-                                    <a class="dropdown-item" href="{{ route('sales.index') }}">
-                                        {{ __('Mis Pedidos') }}
-                                    </a>
+                                        <!-- Opción para Pedidos -->
+                                        <a class="dropdown-item" href="{{ route('sales.index') }}">
+                                            {{ __('Mis Pedidos') }}
+                                        </a>
+                                    @elseif (Auth::user()->role_id == 1)
+                                        <!-- Opción para Gestión de Productos -->
+                                        <a class="dropdown-item" href="{{ route('products.index') }}">
+                                            {{ __('Gestión de Productos') }}
+                                        </a>
+
+                                        <!-- Opción para Generación de Reportes -->
+                                        <a class="dropdown-item" href="{{ route('reports.index') }}">
+                                            {{ __('Generación de Reportes') }}
+                                        </a>
+                                    @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -78,7 +90,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                    
                                 </div>
                             </li>
                         @endguest
@@ -94,7 +105,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
     
 </body>
 </html>
