@@ -17,7 +17,7 @@ class UserProfileController extends Controller
     $user = Auth::user();
 
     // Verificar si el usuario es administrador
-    if ($user->role === 'Administrador') {
+    if ($user->role_id === 1) {
         return redirect()->route('admin.index');  // Redirige a la vista del administrador
     }
 
@@ -25,7 +25,7 @@ class UserProfileController extends Controller
     $addresses = $user->addresses;
     $sales = $user->sales;
 
-    return view('/profile/home', compact('addresses', 'sales'));
+    return view('profile/home', compact('addresses', 'sales'));
 }
 
     public function edit()

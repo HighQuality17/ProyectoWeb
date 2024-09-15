@@ -28,6 +28,9 @@ class RegisterController extends Controller
      *
      * @return void
      */
+    protected $redirectTo = '/profile/home';
+
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -66,6 +69,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role_id' => 2,
         ]);
+        return redirect()->intended(RouteServiceProvider::HOME);
 
      
     }

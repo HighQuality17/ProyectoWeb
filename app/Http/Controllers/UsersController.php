@@ -40,7 +40,7 @@ class UsersController extends Controller
 
 
         $user->save();
-        return view('home');
+        return view('profile.home');
     }
 
     /**

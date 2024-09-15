@@ -18,6 +18,9 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
+    protected $redirectTo = '/profile/home';
+
+
     public function create(): View
     {
         return view('auth.register');
@@ -47,7 +50,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('/profile/home');
+        return redirect()->route('/profile.home');
 
     }
 }
