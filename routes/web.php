@@ -11,6 +11,7 @@ use App\Http\Controllers\SalesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\ContactController;
 
 // Página principal
 Route::get('/', function () {
@@ -52,10 +53,9 @@ Route::middleware('auth')->group(function () {
 });
 
 // Ruta para mostrar el mapa
-Route::get('/contact', [MapController::class, 'showMap'])->name('contact');
-
-// Ruta para manejar solicitudes del mapa
-Route::post('/contact', [MapController::class, 'handleMapRequest'])->name('contact.submit');
+Route::get('/contact', [MapController::class, 'contact'])->name('contact');
+// Ruta para enviar el formulario de contacto
+Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');

@@ -15,6 +15,13 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,32 +38,10 @@
     </div>
 
     <!-- Start Map -->
-    <div id="mapid" style="width: 100%; height: 300px;"></div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaY1BmbXH0w7XaEFRDSdHzrAQIVidkd5w&callback=initMap"></script>
-    <script>
-        function initMap() {
-            var location = { lat: {{ $location['lat'] }}, lng: {{ $location['lng'] }} };
+    <div class="container-fluid my-5">
+        <div id="map"></div>
+    </div>
 
-            var map = new google.maps.Map(document.getElementById('mapid'), {
-                zoom: 13,
-                center: location
-            });
-
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                title: 'E-Shoes'
-            });
-
-            var infowindow = new google.maps.InfoWindow({
-                content: '<b>E-Shoes</b>'
-            });
-
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
-        }
-    </script>
     <!-- End Map -->
 
     <div class="container py-5">
@@ -91,6 +76,35 @@
     </div>
 
     @include('footer')
+
+    <!-- Scripts para Google Maps -->
+    <script>
+        let map;
+
+        async function initMap() {
+
+            const position = { lat: 5.032232, lng: -75.465216 };
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            map = new Map(document.getElementById("map"), {
+                zoom: 15,
+                center: position,
+                mapId: "DEMO_MAP_ID",
+            });
+
+            // The marker, positioned at Uluru
+            const marker = new AdvancedMarkerElement({
+                map: map,
+                position: position,
+                title: "MiPosition",
+            });
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaY1BmbXH0w7XaEFRDSdHzrAQIVidkd5w&callback=initMap" async defer></script>
 
     <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
