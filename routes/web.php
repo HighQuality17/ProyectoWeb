@@ -23,24 +23,29 @@ auth::routes();
 
 // Rutas generales para usuarios autenticados
 Route::middleware('auth')->group(function () {
-    // Rutas RESTful
+
+    // Rutas RESTful protegidas por el middleware de administrador
+    Route::middleware('checkrole:1')->group(function () {
+        Route::resources([
+            'products' => ProductController::class,
+        ]);
+        
+        // Rutas específicas del administrador
+        Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
+    });
+
+    // Rutas RESTful para otros recursos
     Route::resources([
-        'products' => ProductController::class,
         'users'    => UsersController::class,
         'addresses' => AddressController::class,
         'sales'    => SalesController::class,
     ]);
-    
+
     // Rutas para el rol Cliente
     Route::middleware('checkrole:2')->group(function () {
         Route::get('/profile/home', [UserProfileController::class, 'home'])->name('profile.home');
         Route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
-    });
-
-    // Rutas para el rol Administrador
-    Route::middleware('checkrole:1')->group(function () {
-        Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
     });
 
     // Rutas para generar reportes
@@ -62,3 +67,4 @@ Route::view('/shop', 'shop')->name('shop');
 Route::view('/shop-single', 'shop-single')->name('shop.single');
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
+
