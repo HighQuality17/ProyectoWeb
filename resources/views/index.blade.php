@@ -67,7 +67,7 @@ $firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
                                     <a rel="sponsored" class="text-success" href="" target="_blank">y muchas mas...</a>,
                                 </p>
                                 <!-- Button to view products -->
-                                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Ver Productos</a></p>
+                                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Ver Productos</a></p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ $firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
                             <div class="text-align-left">
                                 <h1 class="h1">Nueva Colección</h1>
                                 <h3 class="h2">¡Encuentra aqui las tendencias del momento!</h3>
-                                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Comprar</a></p>
+                                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Comprar</a></p>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ $firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
                                 <p>
                                     Tenemos la mejor calidad de calzado, para todo tipo de gustos y estilos.
                                 </p>
-                                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Ver Categorias</a></p>
+                                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Ver Categorias</a></p>
                             </div>
                         </div>
                     </div>
@@ -131,19 +131,19 @@ $firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
         </div>
         <div class="row">
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="{{ route('shop') }}"><img src="./assets/img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
+                <a href="{{ route('products.shopList') }}"><img src="./assets/img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3">Deportivas</h5>
-                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Comprar</a></p>
+                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Comprar</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="{{ route('shop') }}"><img src="./assets/img/category_img_02.jpg" class="rounded-circle img-fluid border"></a>
+                <a href="{{ route('products.shopList') }}"><img src="./assets/img/category_img_02.jpg" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Elegantes</h2>
-                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Comprar</a></p>
+                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Comprar</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="{{ route('shop') }}"><img src="./assets/img/category_img_03.jpg" class="rounded-circle img-fluid border"></a>
+                <a href="{{ route('products.shopList') }}"><img src="./assets/img/category_img_03.jpg" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Casuales</h2>
-                <p class="text-center"><a href="{{ route('shop') }}" class="btn btn-success">Comprar</a></p>
+                <p class="text-center"><a href="{{ route('products.shopList') }}" class="btn btn-success">Comprar</a></p>
             </div>
         </div>
     </section>

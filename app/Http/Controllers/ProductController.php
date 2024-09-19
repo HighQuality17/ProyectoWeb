@@ -118,4 +118,9 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
     }
+    public function shopList()
+    {
+        $products = Product::all();
+        return view('shop', compact('products'));
+    }
 }
