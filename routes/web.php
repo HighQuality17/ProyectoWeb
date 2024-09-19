@@ -68,6 +68,8 @@ Route::get('/', [HomeController::class, 'show'])->name('home.show');
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');
 Route::get('/shop-single/{id}', [ProductController::class, 'show'])->name('products.show');
-Route::view('/about', 'about')->name('about');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 Route::view('/contact', 'contact')->name('contact');
 
