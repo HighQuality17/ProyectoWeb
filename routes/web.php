@@ -26,9 +26,9 @@ Route::middleware('auth')->group(function () {
 
     // Rutas RESTful protegidas por el middleware de administrador
     Route::middleware('checkrole:1')->group(function () {
-        // Route::resources([
-        //     'products' => ProductController::class,
-        // ]);
+        Route::resources([
+            'products' => ProductController::class,
+        ]);
         
         // Rutas específicas del administrador
         Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
