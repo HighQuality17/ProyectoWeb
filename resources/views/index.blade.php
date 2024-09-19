@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
 </head>
 <body>
+@php
+$firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
+@endphp
+
     <!-- Invoque Header -->
     @include('header')
 
@@ -159,9 +163,11 @@
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
+                        @if($firstThreeProducts->get(1))
+                            <a href="{{route('products.show', $firstThreeProducts->get(1)->id)}}">
                             <img src="./assets/img/feature_prod_01.jpg" class="card-img-top" alt="...">
                         </a>
+
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li>
@@ -171,19 +177,22 @@
                                     <i class="text-muted fa fa-star"></i>
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">COP120.000</li>
+                                <li class="text-muted text-right">{{$firstThreeProducts->get(1)->price}}</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Samba</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark"> {{ $firstThreeProducts->get(1)->brand }}</a>
                             <p class="card-text">
-                                Esta silueta se mantiene fiel a su legado con un discreto y elegante exterior de cuero suave.
+                                {{ $firstThreeProducts->get(1)->description }}
                             </p>
                             <p class="text-muted">Reviews (24)</p>
+
                         </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
+                        @if($firstThreeProducts->get(2))
+                        <a href="{{route('products.show', $firstThreeProducts->get(2)->id)}}">
                             <img src="./assets/img/feature_prod_02.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
@@ -195,19 +204,21 @@
                                     <i class="text-muted fa fa-star"></i>
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">COP210.000</li>
+                                <li class="text-muted text-right">{{$firstThreeProducts->get(2)->price}}</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Adidas Supernova</a>
+                            <a href="shop" class="h2 text-decoration-none text-dark">{{$firstThreeProducts->get(2)->brand}}</a>
                             <p class="card-text">
-                                Ofrece el equilibrio perfecto entre comodidad y soporte para mantenerte cómodo kilómetro tras kilómetro.
+                                {{$firstThreeProducts->get(2)->description}}
                             </p>
                             <p class="text-muted">Reviews (48)</p>
                         </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
+                        @if($firstThreeProducts->get(3))
+                        <a href="{{route('products.show', $firstThreeProducts->get(3)->id)}}">
                             <img src="./assets/img/feature_prod_03.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
@@ -219,15 +230,16 @@
                                     <i class="text-warning fa fa-star"></i>
                                     <i class="text-warning fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">COP180.000</li>
+                                <li class="text-muted text-right">{{$firstThreeProducts->get(3)->price}}</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Nike Blazer</a>
+                            <a href="shop" class="h2 text-decoration-none text-dark">{{$firstThreeProducts->get(3)->brand}}</a>
                             <p class="card-text">
-                                El Nike Blazer Mid '77 Vintage: un clásico desde el inicio.
+                                {{$firstThreeProducts->get(3)->description}}
                             </p>
                             <p class="text-muted">Reviews (15)</p>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

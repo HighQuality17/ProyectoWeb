@@ -62,6 +62,9 @@ Route::get('/contact', [MapController::class, 'contact'])->name('contact');
 // Ruta para enviar el formulario de contacto
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
+//ruta detalles de productos
+Route::get('/', [HomeController::class, 'show'])->name('products');
+
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');
 Route::view('/shop-single', 'shop-single')->name('shop.single');

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,6 +32,12 @@ class HomeController extends Controller
     } else {
         return redirect('/'); // Otra ruta en caso de que el rol no sea reconocido
     }
+    }
+
+    public function show()
+    {
+        $products = Product::all();
+        return view('index',compact('products'));
     }
 
 }
