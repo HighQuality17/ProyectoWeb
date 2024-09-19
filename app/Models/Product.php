@@ -25,6 +25,7 @@ class Product extends Model
         'brand',
         'size',
         'color',
+        'image', // Agrega el campo 'image' al fillable
     ];
 
     // Relación con el modelo SaleProduct
