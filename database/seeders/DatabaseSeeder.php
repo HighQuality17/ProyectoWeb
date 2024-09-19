@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
                 'brand' => 'Adidas',
                 'size' => '42',
                 'color' => 'Negro',
-                'image' => 'shop_03jpg',
+                'image' => 'shop_03.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

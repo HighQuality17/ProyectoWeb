@@ -14,9 +14,9 @@ use App\Http\Controllers\MapController;
 use App\Http\Controllers\ContactController;
 
 // Página principal
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+// Route::get('/', function () {
+//     return view('index');
+// })->name('index');
 
 // Autenticación
 auth::routes();
@@ -26,9 +26,9 @@ Route::middleware('auth')->group(function () {
 
     // Rutas RESTful protegidas por el middleware de administrador
     Route::middleware('checkrole:1')->group(function () {
-        Route::resources([
-            'products' => ProductController::class,
-        ]);
+        // Route::resources([
+        //     'products' => ProductController::class,
+        // ]);
         
         // Rutas específicas del administrador
         Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
@@ -63,11 +63,11 @@ Route::get('/contact', [MapController::class, 'contact'])->name('contact');
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 //ruta detalles de productos
-Route::get('/', [HomeController::class, 'show'])->name('products');
+Route::get('/', [HomeController::class, 'show'])->name('home.show');
 
 // Rutas para páginas estáticas
 Route::view('/shop', 'shop')->name('shop');
-Route::view('/shop-single', 'shop-single')->name('shop.single');
+Route::get('/shop-single/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
 

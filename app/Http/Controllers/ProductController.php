@@ -61,11 +61,10 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
     }
 
-    public function show(Product $product)
+    public function show(string $id)
     {
-        
-
-        return view('products.show', compact('product'));
+        $product = Product::find($id);
+        return view('shop-single', compact('product'));
     }
 
     public function edit($id)
