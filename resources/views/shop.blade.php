@@ -121,33 +121,44 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="row">
-                    @foreach($products as $product)
-                        <div class="col-md-4">
-                            <div class="card mb-4 product-wap rounded-0">
-                                <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="{{ asset('assets/img/' . $product->image) }}">
-                                    <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                        <ul class="list-unstyled">
-                                            <li><a class="btn btn-success text-white" href="shop-single"><i class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="{{route('products.show', $product->id)}}"><i class="far fa-eye"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single"><i class="fas fa-cart-plus"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h3 text-decoration-none">{{ $product->name }}</a>
-                                    <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                        <li>Tallas:</li>
-                                        <li>{{ $product->size}}</li>
-                                        <li class="pt-2">
-                                                <span class="product-color-dot color-dot float-left rounded-circle ml-1">{{$product->color}}</span>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center mb-0">COP {{ $product->price }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                @foreach($products as $product)
+    <div class="col-md-4">
+        <div class="card mb-4 product-wap rounded-0">
+            <div class="card rounded-0">
+                <img class="card-img rounded-0 img-fluid" src="{{ asset('assets/img/' . $product->image) }}">
+                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                    <ul class="list-unstyled">
+                        <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a class="btn btn-success text-white mt-2" href="{{route('products.show', $product->id)}}"><i class="far fa-eye"></i></a></li>
+                        
+                        <!-- añadir al carrito -->
+                        <li>
+                            <form action="{{ route('cart.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <button type="submit" class="btn btn-success text-white mt-2">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <a href="{{route('products.show', $product->id)}}" class="h3 text-decoration-none">{{ $product->name }}</a>
+                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                    <li>Tallas:</li>
+                    <li>{{ $product->size}}</li>
+                    <li class="pt-2">
+                        <span class="product-color-dot color-dot float-left rounded-circle ml-1">{{$product->color}}</span>
+                    </li>
+                </ul>
+                <p class="text-center mb-0">COP {{ $product->price }}</p>
+            </div>
+        </div>
+    </div>
+@endforeach
+
             </div>
                 </div>
                 <div div="row">
@@ -155,12 +166,7 @@ https://templatemo.com/tm-559-zay-shop
                         <li class="page-item disabled">
                             <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
                         </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
