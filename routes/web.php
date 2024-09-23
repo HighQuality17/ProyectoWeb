@@ -14,6 +14,7 @@ use App\Http\Controllers\MapController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
 
+
 // Página principal
 // Route::get('/', function () {
 //     return view('index');
