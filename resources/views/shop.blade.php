@@ -128,19 +128,8 @@ https://templatemo.com/tm-559-zay-shop
                 <img class="card-img rounded-0 img-fluid" src="{{ asset('assets/img/' . $product->image) }}">
                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                     <ul class="list-unstyled">
-                        <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
+                        <!-- ver producto -->
                         <li><a class="btn btn-success text-white mt-2" href="{{route('products.show', $product->id)}}"><i class="far fa-eye"></i></a></li>
-                        
-                        <!-- añadir al carrito -->
-                        <li>
-                            <form action="{{ route('cart.add') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                <button type="submit" class="btn btn-success text-white mt-2">
-                                    <i class="fas fa-cart-plus"></i>
-                                </button>
-                            </form>
-                        </li>
                     </ul>
                 </div>
             </div>

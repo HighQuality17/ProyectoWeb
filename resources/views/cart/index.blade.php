@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container my-5">
     <div class="cart-container p-4 bg-light rounded shadow-sm">
         <h2 class="text-center mb-4">Carrito de Compras</h2>
 
-        @if (session('cart') && count(session('cart')) > 0)
+        @if ($cartItems->count() > 0)
             <table class="table table-borderless">
                 <thead class="border-bottom">
                     <tr>
-                        <th class="text-center">Imagen</th>
+                        <th class="text-center"></th>
                         <th>Producto</th>
                         <th class="text-center">Cantidad</th>
                         <th class="text-end">Precio</th>
@@ -18,18 +17,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (session('cart') as $id => $details)
+                    @foreach ($cartItems as $cartItem)
                         <tr class="align-middle">
                             <td class="text-center">
-                                <img src="{{ asset('images/' . $details['image']) }}" class="img-fluid" width="50" height="50">
+                            <img src="{{ asset('images/' . $cartItem->image) }}" class="img-fluid" style="max-width: 100px; height: auto;">
                             </td>
-                            <td>{{ $details['name'] }}</td>
-                            <td class="text-center">{{ $details['quantity'] }}</td>
-                            <td class="text-end">COP {{ number_format($details['price'], 0, ',', '.') }}</td>
+                            <td>{{ $cartItem->name }}</td>
+                            <td class="text-center">{{ $cartItem->quantity }}</td>
+                            <td class="text-end">COP {{ number_format($cartItem->price, 0, ',', '.') }}</td>
                             <td class="text-end">
                                 <form action="{{ route('cart.remove') }}" method="POST">
                                     @csrf
-                                    <input type="hidden" name="product_id" value="{{ $id }}">
+                                    <input type="hidden" name="product_id" value="{{ $cartItem->product_id }}">
                                     <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                                 </form>
                             </td>
@@ -40,7 +39,7 @@
 
             <div class="row cart-summary mt-4">
                 <div class="col-md-9 text-end">
-                    <h4>Total: COP {{ number_format(array_sum(array_map(fn($item) => $item['price'] * $item['quantity'], session('cart'))), 0, ',', '.') }}</h4>
+                    <h4>Total: COP {{ number_format($cartItems->sum(fn($item) => $item->price * $item->quantity), 0, ',', '.') }}</h4>
                 </div>
                 <div class="col-md-3 text-end">
                     <button class="btn btn-success btn-lg">Pagar</button>

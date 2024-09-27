@@ -145,24 +145,22 @@ https://templatemo.com/tm-559-zay-shop
                             </ul>
     
 
-                            <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
+                            <form action="{{ route('cart.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="product-size" id="product-size" value="S">
+                                <input type="hidden" name="product-quantity" id="product-quantity" value="1">
+
                                 <div class="row">
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
-                                            <li class="list-inline-item">Talla :
-                                                <input type="hidden" name="product-size" id="product-size" value="S">
-                                            </li>
+                                            <li class="list-inline-item">Talla :</li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">{{$product->size}}</span></li>
-
                                         </ul>
                                     </div>
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
-                                            <li class="list-inline-item text-right">
-                                                Cantidad:
-                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
-                                            </li>
+                                            <li class="list-inline-item text-right">Cantidad:</li>
                                             <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
                                             <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
                                             <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
@@ -171,23 +169,10 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
-                                    </div>
-                                    <div class="col d-grid">
-                                        <form action="{{ route('cart.add') }}" method="POST">
-                                            @csrf
-                                            <!-- Input oculto para el ID del producto -->
-                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-
-                                            <!-- Input oculto para la cantidad (puedes reemplazarlo con un input visible si es necesario) -->
-                                            <input type="hidden" name="quantity" id="product-quantity" value="1">
-
-                                            <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocart">Agregar al carrito</button>
-                                        </form>
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocart">Agregar al carrito</button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -205,6 +190,7 @@ https://templatemo.com/tm-559-zay-shop
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/templatemo.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('js/shop-single.js') }}"></script>
     <!-- End Script -->
 
     <!-- Start Slider Script -->
