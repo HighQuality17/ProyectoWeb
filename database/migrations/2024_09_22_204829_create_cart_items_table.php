@@ -10,20 +10,25 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('cart_items', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('product_id');
-            $table->integer('quantity')->default(1);
-            $table->timestamps();
+{
+    Schema::create('cart_items', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('user_id');
+        $table->unsignedBigInteger('product_id');
+        $table->integer('quantity')->default(1);
+        $table->string('image', 255);
+        $table->timestamps();
+
+        // Relación con la tabla de usuarios y productos
+        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         
-            // Relación con la tabla de usuarios y productos
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-        });
-        
-    }
+        // Añadir índices a las claves foráneas para mejorar la performance
+        $table->index('user_id');
+        $table->index('product_id');
+    });
+}
+
 
     /**
      * Reverse the migrations.

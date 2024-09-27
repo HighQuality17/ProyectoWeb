@@ -174,7 +174,16 @@ https://templatemo.com/tm-559-zay-shop
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Agregar al carrito</button>
+                                        <form action="{{ route('cart.add') }}" method="POST">
+                                            @csrf
+                                            <!-- Input oculto para el ID del producto -->
+                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                                            <!-- Input oculto para la cantidad (puedes reemplazarlo con un input visible si es necesario) -->
+                                            <input type="hidden" name="quantity" id="product-quantity" value="1">
+
+                                            <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocart">Agregar al carrito</button>
+                                        </form>
                                     </div>
                                 </div>
                             </form>
@@ -191,15 +200,15 @@ https://templatemo.com/tm-559-zay-shop
     @include('footer')
 
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/templatemo.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
     <!-- End Script -->
 
     <!-- Start Slider Script -->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script>
         $('#carousel-related-product').slick({
             infinite: true,

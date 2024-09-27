@@ -17,5 +17,14 @@ use App\Http\Controllers\Api\ProductController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('products', ProductController::class);
+
+Route::prefix('api')->group(function () {
+    Route::resource('products', Api\ProductController::class)->names([
+        'index' => 'api.products.index',
+        'store' => 'api.products.store',
+        'show' => 'api.products.show',
+        'update' => 'api.products.update',
+        'destroy' => 'api.products.destroy',
+    ]);
+});
 
