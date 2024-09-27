@@ -245,38 +245,7 @@ $firstThreeProducts = $products->take(3); // Toma solo los primeros 3 productos
         </div>
     </section>
     <!-- End Featured Product -->
-    @extends('layouts.app')
-
-
-
-
-
     
-@section('content')
-    <button onclick="fetchProducts()">Cargar Productos</button>
-    <div id="products"></div>
-
-    <script>
-        function fetchProducts() {
-            fetch('http://127.0.0.1:8000/api/products')
-                .then(response => response.json())
-                .then(data => {
-                    const productsDiv = document.getElementById('products');
-                    productsDiv.innerHTML = '';
-                    data.forEach(product => {
-                        productsDiv.innerHTML += `<p>${product.name} - $${product.price}</p>`;
-                    });
-                })
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
-    
-   
-
-
-@endsection
-
-
     <!-- Invoque Footer -->
     @include('footer')
 

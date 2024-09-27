@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('api')->group(function () {
-    Route::resource('products', Api\ProductController::class)->names([
+    Route::resource('products', \App\Http\Controllers\Api\ProductController::class)->names([
         'index' => 'api.products.index',
         'store' => 'api.products.store',
         'show' => 'api.products.show',
