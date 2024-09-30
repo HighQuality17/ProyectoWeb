@@ -22,7 +22,7 @@
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->stock }}</td>
                         <td>
-                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-info">Ver</a>
+                            <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-info">Ver</a>
                             <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;">
                                 @csrf

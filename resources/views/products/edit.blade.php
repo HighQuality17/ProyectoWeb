@@ -34,7 +34,7 @@
             </div>
             <div class="mb-3">
                 <label for="guarantee" class="form-label">Garantía</label>
-                <input type="number" name="guarantee" class="form-control" id="guarantee" value="{{ $product->guarantee }}" required>
+                <input type="text" name="guarantee" class="form-control" id="guarantee" value="{{ $product->guarantee }}" required>
             </div>
             <div class="mb-3">
                 <label for="brand" class="form-label">Marca</label>

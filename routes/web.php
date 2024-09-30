@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     // Rutas RESTful protegidas por el middleware de administrador
     Route::middleware('checkrole:1')->group(function () {
         Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
+        Route::get('/products/show/{id}', [AdminController::class, 'showProduct'])->name('admin.products.show');
         Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
         Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
         Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');

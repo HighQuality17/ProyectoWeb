@@ -104,4 +104,10 @@ class AdminController extends Controller
         // Lógica para generar reporte de productos
         return view('admin.reports.products', compact('products'));
     }
+
+    public function showProduct($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('products.show', compact('product'));
+    }
 }

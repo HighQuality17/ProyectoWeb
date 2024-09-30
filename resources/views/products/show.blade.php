@@ -57,6 +57,7 @@
             </div>
 
             <a href="{{ route('products.index') }}" class="btn btn-success">Volver</a>
+            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
         </div>
     </div>
 </div>
