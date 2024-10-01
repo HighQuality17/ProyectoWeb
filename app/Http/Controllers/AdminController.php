@@ -17,8 +17,8 @@ class AdminController extends Controller
     public function home()
     {
         // Aquí podrías obtener datos para el panel, como productos o usuarios
-        $products = Product::all(); // Ejemplo de obtención de productos
-        $reports = []; // Datos de reportes (esto es solo un ejemplo)
+        $products = Product::all();
+        $reports = [];
 
         return view('admin.index', compact('products', 'reports'));
     }
@@ -40,15 +40,31 @@ class AdminController extends Controller
     public function storeProduct(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
-            'description' => 'required|string',
+            'name' => 'required',
+            'line' => 'required',
+            'description' => 'required',
+            'price' => 'required|integer',
+            'weight' => 'required|integer',
+            'stock' => 'required|integer',
+            'guarantee' => 'required|integer',
+            'brand' => 'required',
+            'size' => 'required|integer',
+            'color' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         Product::create([
             'name' => $request->name,
-            'price' => $request->price,
+            'line' => $request->line,
             'description' => $request->description,
+            'price' => $request->price,
+            'weight' => $request->weight,
+            'stock' => $request->stock,
+            'guarantee' => $request->guarantee,
+            'brand' => $request->brand,
+            'size' => $request->size,
+            'color' => $request->color,
+            'image' => $request->image->store('products', 'public'),
         ]);
 
         return redirect()->route('admin.products.index')->with('success', 'Producto creado correctamente.');
@@ -66,15 +82,32 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
+            'line' => 'required|string|max:255',
             'description' => 'required|string',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'stock' => 'required|integer',
+            'guarantee' => 'required|integer',
+            'brand' => 'required|string|max:255',
+            'size' => 'required|integer',
+            'color' => 'required|string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+
         ]);
 
         $product = Product::findOrFail($id);
         $product->update([
             'name' => $request->name,
-            'price' => $request->price,
+            'line' => $request->line,
             'description' => $request->description,
+            'price' => $request->price,
+            'weight' => $request->weight,
+            'stock' => $request->stock,
+            'guarantee' => $request->guarantee,
+            'brand' => $request->brand,
+            'size' => $request->size,
+            'color' => $request->color,
+            'image' => $request->image->store('products', 'public'),
         ]);
 
         return redirect()->route('admin.products.index')->with('success', 'Producto actualizado correctamente.');

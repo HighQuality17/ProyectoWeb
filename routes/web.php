@@ -33,8 +33,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
         Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
         Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
-        Route::patch('/products/update/{id}', [ProductController::class, 'update'])->name('products.update');
-        Route::delete('/products/destroy/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+        Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
         
         // Rutas específicas del administrador
         Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');

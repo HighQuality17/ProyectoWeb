@@ -37,11 +37,10 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Más información</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Inicio</a></li>
-                        <li><a class="text-decoration-none" href="#">Acerca de</a></li>
-                        <li><a class="text-decoration-none" href="#">Ubicaciones de las tiendas</a></li>
-                        <li><a class="text-decoration-none" href="#">Preguntas frecuentes</a></li>
-                        <li><a class="text-decoration-none" href="#">Contacto</a></li>
+                        <li><a class="text-decoration-none" href="/">Inicio</a></li>
+                        <li><a class="text-decoration-none" href="/about">Acerca de</a></li>
+                        <li><a class="text-decoration-none" href="/contact">Ubicaciones de las tiendas</a></li>
+                        <li><a class="text-decoration-none" href="/contact">Contacto</a></li>
                     </ul>
                 </div>
 

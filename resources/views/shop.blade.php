@@ -62,8 +62,8 @@ https://templatemo.com/tm-559-zay-shop
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Hombre</a></li>
-                            <li><a class="text-decoration-none" href="#">Mujer</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Hombre</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Mujer</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
@@ -73,9 +73,9 @@ https://templatemo.com/tm-559-zay-shop
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             
-                            <li><a class="text-decoration-none" href="#">Deportivo</a></li>
-                            <li><a class="text-decoration-none" href="#">Casual</a></li>
-                            <li><a class="text-decoration-none" href="#">Elegante</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Deportivo</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Casual</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Elegante</a></li>
                     
                         </ul>
                     </li>
@@ -85,11 +85,11 @@ https://templatemo.com/tm-559-zay-shop
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Nike</a></li>
-                            <li><a class="text-decoration-none" href="#">Adidas</a></li>
-                            <li><a class="text-decoration-none" href="#">Rebook</a></li>
-                            <li><a class="text-decoration-none" href="#">New Balance</a></li>
-                            <li><a class="text-decoration-none" href="#">Skechers</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Nike</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Adidas</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Rebook</a></li>
+                            <li><a class="text-decoration-none" href="/shop">New Balance</a></li>
+                            <li><a class="text-decoration-none" href="/shop">Skechers</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -100,13 +100,13 @@ https://templatemo.com/tm-559-zay-shop
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Todo</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="/shop">Todo</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Hombres</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="/shop">Hombres</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Mujeres</a>
+                                <a class="h3 text-dark text-decoration-none" href="/shop">Mujeres</a>
                             </li>
                         </ul>
                     </div>

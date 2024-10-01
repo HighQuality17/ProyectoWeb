@@ -69,6 +69,11 @@
                                         <a class="dropdown-item" href="{{ route('sales.index') }}">
                                             {{ __('Mis Pedidos') }}
                                         </a>
+
+                                        <!-- Opción para Carrito de Compras -->
+                                        <a class="dropdown-item" href="{{ route('cart.index') }}">
+                                            {{ __('Carrito de Compras') }}
+                                        </a>
                                     @elseif (Auth::user()->role_id == 1)
                                         <!-- Opción para Gestión de Productos -->
                                         <a class="dropdown-item" href="{{ route('products.index') }}">

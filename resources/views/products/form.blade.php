@@ -1,5 +1,3 @@
-<!-- resources/views/products/form.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
