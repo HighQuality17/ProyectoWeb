@@ -21,11 +21,11 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Precio</label>
-                    <input type="number" name="price" class="form-control" required>
+                    <input type="number" name="price" class="form-control" required step="0.01">
                 </div>
                 <div class="form-group">
                     <label for="weight">Peso</label>
-                    <input type="number" name="weight" class="form-control" required>
+                    <input type="number" name="weight" class="form-control" required step="0.01">
                 </div>
                 <div class="form-group">
                     <label for="stock">Stock</label>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="guarantee">Garantía</label>
-                    <input type="number" name="guarantee" class="form-control" required>
+                    <input type="text" name="guarantee" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="brand">Marca</label>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label for="size">Talla</label>
-                    <input type="number" name="size" class="form-control" required>
+                    <input type="number" name="size" class="form-control" required step="0.01">
                 </div>
                 <div class="form-group">
                     <label for="color">Color</label>

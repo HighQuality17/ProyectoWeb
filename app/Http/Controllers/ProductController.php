@@ -28,7 +28,7 @@ class ProductController extends Controller
         'price' => 'required|numeric',
         'weight' => 'required|numeric',
         'stock' => 'required|integer',
-        'guarantee' => 'required|integer',
+        'guarantee' => 'required|string',
         'brand' => 'required|string',
         'size' => 'required|numeric',
         'color' => 'required|string',
@@ -75,7 +75,7 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, Product $product)
-{
+    {
     // Validación de los campos
     $request->validate([
         'name' => 'required|string',
@@ -84,7 +84,7 @@ class ProductController extends Controller
         'price' => 'required|numeric',
         'weight' => 'required|numeric',
         'stock' => 'required|integer',
-        'guarantee' => 'required|integer',
+        'guarantee' => 'required|string',
         'brand' => 'required|string',
         'size' => 'required|numeric',
         'color' => 'required|string',
@@ -121,7 +121,7 @@ class ProductController extends Controller
     ]);
 
     return redirect()->route('products.index')->with('success', 'Producto actualizado correctamente.');
-}
+    }
 
 
 
