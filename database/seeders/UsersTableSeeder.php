@@ -66,5 +66,13 @@ class UsersTableSeeder extends Seeder
             'phone' => '3044781418',
             'password' => Hash::make('123456abc'),
         ]);
+        User::create([
+            'role_id' => 3,
+            'name' => 'Proveedor 1',
+            'email' => 'proveedor@gmail.com',
+            'idcard' => '1055698745',
+            'phone' => '3044333318',
+            'password' => Hash::make('masterprovider'),
+        ]);
     }
 }
