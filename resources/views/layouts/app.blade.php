@@ -74,7 +74,7 @@
                                         <a class="dropdown-item" href="{{ route('cart.index') }}">
                                             {{ __('Carrito de Compras') }}
                                         </a>
-                                    @elseif (Auth::user()->role_id == 1)
+                                    @elseif (in_array(Auth::user()->role_id,[1,3]))
                                         <!-- Opción para Gestión de Productos -->
                                         <a class="dropdown-item" href="{{ route('products.index') }}">
                                             {{ __('Gestión de Productos') }}
@@ -87,8 +87,8 @@
                                     @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

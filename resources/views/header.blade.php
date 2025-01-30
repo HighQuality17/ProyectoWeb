@@ -70,17 +70,7 @@
                             @endauth
                         </span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="
-                        @if (Auth::check())
-                            @if (Auth::user()->role_id == 1)
-                                {{ route('admin.index') }}
-                            @else
-                                {{ route('profile.home') }}
-                            @endif
-                        @else
-                            {{ route('login') }}
-                        @endif
-                    ">
+                    <a class="nav-icon position-relative text-decoration-none" href="{{route('login')}}">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">1</span>
                     </a>

@@ -25,11 +25,11 @@ class RedirectIfAuthenticated
                 
                 // Verificar el role_id del usuario y redirigir según corresponda
                 if ($user->role_id === 1) {
-                    return redirect()->route('admin.index');  // Redirige a la vista del administrador
+                    return redirect()->route('admin.home');  // Redirige a la vista del administrador
                 } elseif ($user->role_id === 2) {
                     return redirect()->route('profile.home');  // Redirige a la vista del cliente
                 } elseif ($user->role_id === 3) {
-                    // return redirect()->route('provider.home');  // Redirige a la vista del cliente
+                    return redirect()->route('provider.home');  // Redirige a la vista del proveedor
                 }
             }
         }

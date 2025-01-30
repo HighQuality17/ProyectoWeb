@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('stock');
             $table->string('guarantee');
             $table->string('brand');
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')->references('id')->on('users');
             $table->decimal('size');
             $table->string('color');
             $table->timestamps();

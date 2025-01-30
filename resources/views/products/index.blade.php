@@ -23,18 +23,24 @@
                         <td>{{ $product->stock }}</td>
                         <td>
                             <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-info">Ver</a>
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
-                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
+                            @if(Auth::user()->role_id === 3)
+                                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
+                                <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @if(Auth::user()->role_id === 1)
+            <a href="{{ route('admin.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @elseif(Auth::user()->role_id === 3)
+            <a href="{{ route('provider.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @endif
     </div>
 @endsection
 

@@ -18,7 +18,7 @@ class UserProfileController extends Controller
 
     // Verificar si el usuario es administrador
     if ($user->role_id === 1) {
-        return redirect()->route('admin.index');  // Redirige a la vista del administrador
+        return redirect()->route('admin.home');  // Redirige a la vista del administrador
     }
 
     // Si no es administrador, mostrar la vista del perfil de usuario

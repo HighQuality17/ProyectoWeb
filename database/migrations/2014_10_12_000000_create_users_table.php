@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('idcard')->unique();
             $table->string('phone')->unique();
             $table->string('password');
+            $table->boolean('status')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

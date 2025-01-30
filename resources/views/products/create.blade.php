@@ -54,7 +54,7 @@
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
             <br>
-            <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestión</a>
+            <a href="{{ route('provider.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestión</a>
         </div>
     </div>
 </div>

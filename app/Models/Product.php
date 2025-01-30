@@ -23,6 +23,7 @@ class Product extends Model
         'stock',
         'guarantee',
         'brand',
+        'provider_id',
         'size',
         'color',
         'image', // Agrega el campo 'image' al fillable

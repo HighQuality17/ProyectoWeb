@@ -70,8 +70,16 @@ class UsersTableSeeder extends Seeder
             'role_id' => 3,
             'name' => 'Proveedor 1',
             'email' => 'proveedor@gmail.com',
-            'idcard' => '1055698745',
+            'idcard' => '1255698744',
             'phone' => '3044333318',
+            'password' => Hash::make('masterprovider'),
+        ]);
+        User::create([
+            'role_id' => 3,
+            'name' => 'Proveedor 2',
+            'email' => 'proveedor2@gmail.com',
+            'idcard' => '1225338744',
+            'phone' => '3145336318',
             'password' => Hash::make('masterprovider'),
         ]);
     }

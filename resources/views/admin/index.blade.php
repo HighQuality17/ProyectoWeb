@@ -12,7 +12,7 @@
                     <h2 class="card-title h4">Gestión de Productos</h2>
                     <p class="card-text">Administra los productos disponibles en la tienda.</p>
                     <a href="{{ route('products.index') }}" class="btn btn-success">Ver Productos</a>
-                    <a href="{{ route('products.create') }}" class="btn btn-success ml-2">Añadir Producto</a>
+                    {{-- <a href="{{ route('products.create') }}" class="btn btn-success ml-2">Añadir Producto</a> --}}
                 </div>
             </div>
         </div>
