@@ -35,6 +35,11 @@ class Product extends Model
         return $this->hasMany(InvoiceProduct::class);
     }
 
+    public function provider()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     // Relación con el modelo Invoice a través de InvoiceProduct
     public function sales()
     {

@@ -138,9 +138,9 @@ class AdminController extends Controller
         return view('admin.reports.products', compact('products'));
     }
 
-    public function showProduct($id)
-    {
-        $product = Product::findOrFail($id);
-        return view('products.show', compact('product'));
-    }
+    // public function showProduct($id)
+    // {
+    //     $product = Product::findOrFail($id);
+    //     return view('products.show', compact('product'));
+    // }
 }

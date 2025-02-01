@@ -55,10 +55,20 @@
                 <label>Color:</label>
                 <p>{{ $product->color }}</p>
             </div>
-
-            <a href="{{ route('products.index') }}" class="btn btn-success">Volver</a>
-            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
+            @if(Auth::user()->role_id === 1)
+                <a href="{{ route('admin.products.index') }}" class="btn btn-success">Volver</a>
+            @else
+                <a href="{{ route('admin.products.index') }}" class="btn btn-success">Volver</a>
+            @endif
+            @if(Auth::user()->role_id === 3)
+                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
+            @endif
         </div>
     </div>
 </div>
+<style>
+    label {
+        font-weight: bold;
+    }
+</style>
 @endsection

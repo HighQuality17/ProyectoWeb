@@ -62,12 +62,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd($data);
+        // dd($data);
         $role = 2;
         $status = 1;
         $redirectPath = '/profile/home';
         
-        if($data['rol_seleccionado'] == 'proveedor'){
+        if($data['rol'] == 'proveedor'){
             $role = 3;
             $status = 0;
             $redirectPath = '/provider/home';

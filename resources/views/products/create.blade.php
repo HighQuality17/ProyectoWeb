@@ -7,6 +7,7 @@
             <h1>Agregar Producto</h1>
             <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="provider_id" value="{{ auth()->user()->id }}">
                 <div class="form-group">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" class="form-control" required>
@@ -59,3 +60,4 @@
     </div>
 </div>
 @endsection
+

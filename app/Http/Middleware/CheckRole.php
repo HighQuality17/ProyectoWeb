@@ -20,6 +20,7 @@ class CheckRole
             // Si no está autenticado, redirige al login
             return redirect('/login');
         }
+        // dd("eee", Auth::user()->role_id, $roleId);
 
         // dd("eee", Auth::user()->status);
         if(Auth::user()->status == 1){

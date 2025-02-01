@@ -124,7 +124,7 @@
             document.getElementById('btn-prov').className="btn btn-primary";
 
             document.getElementById('labelNombre').innerText = 'Nombre de Empresa:';
-            document.getElementById('labelDocumento').innerText = 'NIT / RUC / Identificación Fiscal:';
+            document.getElementById('labelDocumento').innerText = 'NIT / RUT:';
         } else {
             document.getElementById('btn-prov').className="btn btn-secondary";
             document.getElementById('btn-cli').className="btn btn-primary";

@@ -13,9 +13,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $user->name }}</h5>
                 <p class="card-text"><strong>Email:</strong> {{ $user->email }}</p>
-                <p class="card-text"><strong>Número de Identificación:</strong> {{ $user->idcard }}</p>
+                <p class="card-text"><strong>{{ App\Models\Role::find($user->role_id)->name === 'Proveedor' ? 'NIT / RUT:' : 'Cedula:' }}</strong> {{ $user->idcard }}</p>
                 <p class="card-text"><strong>Teléfono:</strong> {{ $user->phone }}</p>
-                <p class="card-text"><strong>Rol:</strong> {{ $user->role->name ?? 'N/A' }}</p>
+                <p class="card-text"><strong>Rol:</strong> {{ $user->role_id ? \App\Models\Role::find($user->role_id)->name : 'N/A' }}</p>
                 <p class="card-text"><strong>Fecha de Creación:</strong> {{ $user->created_at->format('d/m/Y H:i') }}</p>
             </div>
             <div class="card-footer">

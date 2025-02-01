@@ -53,7 +53,7 @@ class ProductController extends Controller
     if ($request->hasFile('image')) {
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
+        $image->move(public_path('assets/img'), $imageName);
     } else {
         $imageName = null;
     }
@@ -69,6 +69,7 @@ class ProductController extends Controller
     $product->brand = $request->brand;
     $product->size = $request->size;
     $product->color = $request->color;
+    $product->provider_id = $request->provider_id;
     $product->image = $imageName;
     $product->save();
 
