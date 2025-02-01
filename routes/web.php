@@ -80,6 +80,7 @@ Route::post('/contact-submit', [ContactController::class, 'submit'])->name('cont
 Route::get('/', [HomeController::class, 'show'])->name('home.show');
 
 // Rutas para páginas estáticas
+//Route::get('/shop', [ProductController::class, 'index'])->name('shop');
 Route::get('/shop', [ProductController::class, 'shopList'])->name('products.shopList');
 Route::get('/shop-single/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/about', function () {
