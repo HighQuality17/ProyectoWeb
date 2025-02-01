@@ -21,11 +21,19 @@ class CheckRole
             return redirect('/login');
         }
 
-        // Verifica si el usuario tiene el rol adecuado
-        if (Auth::user()->role_id != $roleId) {
-            // Retorna un 403 si el rol no coincide
-            abort(403, 'Acceso denegado.');
+        // dd("eee", Auth::user()->status);
+        if(Auth::user()->status == 1){
+            
+            // Verifica si el usuario tiene el rol adecuado
+            if (Auth::user()->role_id != $roleId) {
+                // Retorna un 403 si el rol no coincide
+                abort(403, 'Acceso denegado.');
+            }
+
+        }else{
+            return response()->view('auth.userDisabled');
         }
+
 
         return $next($request);
     }

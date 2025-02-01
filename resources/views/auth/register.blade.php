@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registro') }}</div>
+                <div class="card-header">{{ __('register') }}</div>
 
                 <!-- Mostrar errores de validación -->
                 @if ($errors->any())
@@ -95,6 +95,15 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="proveedor-checkbox" class="col-md-4 col-form-label text-md-end">{{ __('Solicito ser proveedor') }}</label>
+                        
+                            <div class="col-md-6">
+                                <!-- Checkbox para solicitar ser proveedor -->
+                                <input type="checkbox" id="proveedor-checkbox" name="solicitar_ser_proveedor" value="1">
                             </div>
                         </div>
 

@@ -18,7 +18,7 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    protected $redirectTo = '/profile/home';
+    // protected $redirectTo = '/profijhjhle/home';
 
 
     public function create(): View
@@ -33,24 +33,44 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        dd($request);
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'role_id' => 2,
-        ]);
+        // if($request->has('solicitar_ser_proveedor')){
+        //     $user = User::create([
+        //         'name' => $request->name,
+        //         'email' => $request->email,
+        //         'password' => Hash::make($request->password),
+        //         'role_id' => 3,
+        //         'status' => 0,
+        //     ]);
+        //         event(new Registered($user));
+        
+        //         Auth::login($user);
+        
+        //         return redirect()->route('provider.home');
+        // }else{
 
-        event(new Registered($user));
+        //     $user = User::create([
+        //         'name' => $request->name,
+        //         'email' => $request->email,
+        //         'password' => Hash::make($request->password),
+        //         'role_id' => 2,
+        //     ]);
 
-        Auth::login($user);
+        //     event(new Registered($user));
 
-        return redirect()->route('/profile.home');
+        //     Auth::login($user);
+
+        //     return redirect()->route('profile.home');
+
+        //     }
+
+
 
     }
 }
