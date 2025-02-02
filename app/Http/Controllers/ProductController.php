@@ -144,6 +144,7 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
     }
+    
     public function shopList(Request $request)
     {
         $query = Product::query();

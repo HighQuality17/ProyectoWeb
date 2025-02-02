@@ -49,5 +49,9 @@
             <p class="text-center">No hay productos en el carrito</p>
         @endif
     </div>
+    <div class="text-center mt-4">
+        <a href="{{ route('home') }}" class="btn btn-secondary">Volver al inicio</a>
+        <a href="{{ route('products.shopList') }}" class="btn btn-success">Ver más productos</a>
+    </div>
 </div>
 @endsection

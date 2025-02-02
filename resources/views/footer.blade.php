@@ -25,11 +25,11 @@
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Productos</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         
-                        <li><a class="text-decoration-none" href="{{ route('products.shopList') }}">Calzado Deportivo</a></li>
-                        <li><a class="text-decoration-none" href="{{ route('products.shopList') }}">Calzado para Hombre</a></li>
-                        <li><a class="text-decoration-none" href="{{ route('products.shopList') }}">Calzado para Mujer</a></li>
-                        <li><a class="text-decoration-none" href="{{ route('products.shopList') }}">Calzado Casual</a></li>
-                        <li><a class="text-decoration-none" href="{{ route('products.shopList') }}">Calzado Elegante</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Deportivo']) }}">Calzado Deportivo</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('products.shopList', ['gender' => 'Hombre']) }}">Calzado para Hombre</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('products.shopList', ['gender' => 'Mujer']) }}">Calzado para Mujer</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Casual']) }}">Calzado Casual</a></li>
+                        <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Formal']) }}">Calzado Formal</a></li>
                         
                     </ul>
                 </div>

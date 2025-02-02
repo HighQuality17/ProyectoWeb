@@ -35,7 +35,7 @@ class AuthenticatedSessionController extends Controller
         if ($user->role_id == 1) { // Asumiendo que '1' es el ID del rol 'Administrador'
             return redirect()->route('admin.home');
         } elseif ($user->role_id == 3) {
-            return redirect()->route('provider.home')
+            return redirect()->route('provider.home');
         } else {
             return redirect()->route('profile.home');
         }

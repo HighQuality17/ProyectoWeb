@@ -41,7 +41,7 @@
                                     <strong>Barrio:</strong> {{ $address->neighborhood }}<br>
                                     <strong>Dirección 1:</strong> {{ $address->address_line1 }}<br>
                                     <strong>Dirección 2:</strong> {{ $address->address_line2 ?? '-' }}<br>
-                                    <a href="{{ route('addresses.edit', $address->id) }}" class="btn btn-success btn-sm mt-2">Editar</a>
+                                    <a href="{{ route('addresses.index')}}" class="btn btn-success btn-sm mt-2">Ver</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -77,6 +77,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ route('cart.index') }}" class="btn btn-success me-2">Ir a tu carrito</a>
+        <a href="{{ route('home') }}" class="btn btn-secondary">Volver al inicio</a>
     </div>
 </div>
 @endsection

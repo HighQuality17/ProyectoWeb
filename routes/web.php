@@ -42,7 +42,6 @@ Route::middleware('auth')->group(function () {
         // Rutas RESTful para otros recursos
         Route::resources([
             'users'    => UsersController::class,
-            'addresses' => AddressController::class,
             'sales'    => SalesController::class,
         ]);
     });
@@ -53,7 +52,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/profile/home', [UserProfileController::class, 'home'])->name('profile.home');
         Route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
-
+        Route::get('/addresses/index', [AddressController::class, 'index'])->name('addresses.index');
+        Route::get('/addresses/create', [AddressController::class, 'create'])->name('addresses.create');
+        Route::post('/addresses/store', [AddressController::class, 'store'])->name('addresses.store');
+        Route::get('/addresses/edit/{address}', [AddressController::class, 'edit'])->name('addresses.edit');
+        Route::patch('/addresses/update/{address}', [AddressController::class, 'update'])->name('addresses.update');
+        Route::delete('/addresses/destroy/{address}', [AddressController::class, 'destroy'])->name('addresses.destroy');
+        
         //Rutas carrito de compras
 
         Route::get('/cart', [CartController::class, 'index'])->name('cart.index');  // Mostrar carrito
@@ -99,7 +104,6 @@ Route::post('/contact-submit', [ContactController::class, 'submit'])->name('cont
 Route::get('/', [HomeController::class, 'show'])->name('home');
 
 // Rutas para páginas estáticas
-//Route::get('/shop', [ProductController::class, 'index'])->name('shop');
 Route::get('/shop', [ProductController::class, 'shopList'])->name('products.shopList');
 Route::get('/shop-single/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/about', function () {
