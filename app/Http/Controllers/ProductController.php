@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Coment; // Asegúrate de incluir el modelo Coment
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all(); 
+        if(Auth::user()->role_id==3){
+            $products= Product::where("provider_id",Auth::user()->id)->get();
+        } else{
+            $products = Product::all();
+        }
         return view('products.index', compact('products'));
     }
 
@@ -30,6 +35,15 @@ class ProductController extends Controller
         'stock' => 'required|integer',
         'guarantee' => 'required|string',
         'brand' => 'required|string',
+        'provider_id' => [
+            'required',
+            'exists:users,id', // Verifica que el provider_id exista en la tabla users
+            function ($attribute, $value, $fail) {
+                if (!\App\Models\User::where('id', $value)->where('role_id', 3)->exists()) {
+                    $fail('El proveedor seleccionado no es válido.');
+                }
+            },
+        ],
         'size' => 'required|numeric',
         'color' => 'required|string',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -39,7 +53,7 @@ class ProductController extends Controller
     if ($request->hasFile('image')) {
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
+        $image->move(public_path('assets/img'), $imageName);
     } else {
         $imageName = null;
     }
@@ -55,6 +69,7 @@ class ProductController extends Controller
     $product->brand = $request->brand;
     $product->size = $request->size;
     $product->color = $request->color;
+    $product->provider_id = $request->provider_id;
     $product->image = $imageName;
     $product->save();
 

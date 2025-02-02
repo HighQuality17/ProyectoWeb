@@ -30,6 +30,14 @@ class RolesTableSeeder extends Seeder
                 'created_at' => now(), 
                 'updated_at' => now()
             ],
+            [
+                'id' => 3, 
+                'name' => 'Proveedor', 
+                'label' => 'Provider', 
+                'description' => 'Rol con acceso a funciones de Proveedor',
+                'created_at' => now(), 
+                'updated_at' => now()
+            ],
         ]);
     }
 }

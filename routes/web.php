@@ -13,6 +13,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProviderController;
 
 
 // Página principal
@@ -28,24 +29,24 @@ Route::middleware('auth')->group(function () {
 
     // Rutas RESTful protegidas por el middleware de administrador
     Route::middleware('checkrole:1')->group(function () {
-        Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
-        Route::get('/products/show/{id}', [AdminController::class, 'showProduct'])->name('admin.products.show');
-        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
-        Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
-        Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
-        Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-        Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+        Route::get('/products/indexAdmin', [ProductController::class, 'index'])->name('admin.products.index');
+        Route::get('/products/showAdmin/{id}',[ProductController::class, 'show'])->name('admin.products.show');
+        // Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+        // Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+        // Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
+        // Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+        // Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
         
         // Rutas específicas del administrador
-        Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
+        Route::get('/admin/home', [AdminController::class, 'home'])->name('admin.home');
+        // Rutas RESTful para otros recursos
+        Route::resources([
+            'users'    => UsersController::class,
+            'addresses' => AddressController::class,
+            'sales'    => SalesController::class,
+        ]);
     });
 
-    // Rutas RESTful para otros recursos
-    Route::resources([
-        'users'    => UsersController::class,
-        'addresses' => AddressController::class,
-        'sales'    => SalesController::class,
-    ]);
 
     // Rutas para el rol Cliente
     Route::middleware('checkrole:2')->group(function () {
@@ -62,6 +63,24 @@ Route::middleware('auth')->group(function () {
         Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update'); // Actualizar cantidad en el carrito
     });
 
+
+    Route::middleware('checkrole:3')->group(function () {
+        //Route get for provider index
+        Route::get('/provider/home', [ProviderController::class, 'home'])->name('provider.home');
+
+        Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
+        Route::get('/products/show/{id}', [ProductController::class, 'show'])->name('products.show');
+        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+        Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+        Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
+        Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+
+
+    });
+
+
     // Rutas para generar reportes
     Route::prefix('report')->group(function () {
         Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
@@ -77,7 +96,7 @@ Route::get('/contact', [MapController::class, 'contact'])->name('contact');
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 //ruta detalles de productos
-Route::get('/', [HomeController::class, 'show'])->name('home.show');
+Route::get('/', [HomeController::class, 'show'])->name('home');
 
 // Rutas para páginas estáticas
 //Route::get('/shop', [ProductController::class, 'index'])->name('shop');

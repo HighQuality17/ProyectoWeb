@@ -6,21 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Sale;
 
-class AdminController extends Controller
+class ProviderController extends Controller
 {
     // Mostrar la página principal del administrador
-    public function index()
-    {
-        return view('admin.index');
-    }
 
     public function home()
     {
-        // Aquí podrías obtener datos para el panel, como productos o usuarios
-        $products = Product::all();
-        $reports = [];
 
-        return view('admin.index', compact('products', 'reports'));
+        return view('provider.index');
     }
 
     // Mostrar todos los productos
@@ -138,9 +131,9 @@ class AdminController extends Controller
         return view('admin.reports.products', compact('products'));
     }
 
-    // public function showProduct($id)
-    // {
-    //     $product = Product::findOrFail($id);
-    //     return view('products.show', compact('product'));
-    // }
+    public function showProduct($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('products.show', compact('product'));
+    }
 }

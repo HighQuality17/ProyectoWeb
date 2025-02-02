@@ -3,7 +3,9 @@
 @section('content')
     <div class="container">
         <h1>Productos</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Crear Producto</a>
+        @if(Auth::user()->role_id === 3)
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Crear Producto</a>
+        @endif
         <table class="table">
             <thead>
                 <tr>
@@ -11,6 +13,7 @@
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Stock</th>
+                    <th>Proveedor</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -21,43 +24,30 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->stock }}</td>
+                        <td>{{ $product->provider->name }}</td>
                         <td>
-                            <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-info">Ver</a>
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
-                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
+                            @if(Auth::user()->role_id === 1)
+                                <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-info">Ver</a>
+                            @else
+                                <a href="{{ route('products.show', $product->id) }}" class="btn btn-info">Ver</a>
+                            @endif
+                            @if(Auth::user()->role_id === 3)
+                                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Editar</a>
+                                <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @if(Auth::user()->role_id === 1)
+            <a href="{{ route('admin.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @else
+            <a href="{{ route('provider.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestion</a>
+        @endif
     </div>
-@endsection
-
-@section('content')
-    <button onclick="fetchProducts()">Cargar Productos</button>
-    <div id="products"></div>
-
-    <script>
-        function fetchProducts() {
-            fetch('http://127.0.0.1:8000/api/products')
-                .then(response => response.json())
-                .then(data => {
-                    const productsDiv = document.getElementById('products');
-                    productsDiv.innerHTML = '';
-                    data.forEach(product => {
-                        productsDiv.innerHTML += `<p>${product.name} - $${product.price}</p>`;
-                    });
-                })
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
-    
-   
-
-
 @endsection

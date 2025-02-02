@@ -28,12 +28,13 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    protected $redirectTo = '/profile/home';
+    protected $redirectTo;
 
 
     public function __construct()
     {
         $this->middleware('guest');
+        $redirectTo = '/profile/home';
     }
 
     /**
@@ -61,16 +62,56 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        // dd($data);
+        $role = 2;
+        $status = 1;
+        $redirectPath = '/profile/home';
+        
+        if($data['rol'] == 'proveedor'){
+            $role = 3;
+            $status = 0;
+            $redirectPath = '/provider/home';
+        }
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'idcard' => $data['idcard'],
             'phone' => $data['phone'],
+            'status' => $status,
             'password' => Hash::make($data['password']),
-            'role_id' => 2,
+            'role_id' => $role,
         ]);
-        return redirect()->intended(RouteServiceProvider::HOME);
 
-     
+        // dd($user);
+        // Asignar la ruta de redirección
+        $this->redirectTo = $redirectPath;
+
+        return $user;
     }
+
+
+        // return redirect()->intended(RouteServiceProvider::HOME);
+
+        // if($data['solicitar_ser_proveedor'] ==1){
+        //     $role= 3;
+        //     $status=0;
+        //     $redirectTo='provider.home';
+        // }else{
+        //     $role= 2;
+        //     $status=1;
+        //     $redirectTo='profile.home';
+        // }
+        // $user = User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'idcard' => $data['idcard'],
+        //     'phone' => $data['phone'],
+        //     'password' => Hash::make($data['password']),
+        //     'role_id' => $role,
+        //     'status' => $status,
+        // ]);
+
+    
+//     }
 }

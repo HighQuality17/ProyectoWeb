@@ -73,6 +73,8 @@ class UsersController extends Controller
             'idcard' => 'required|integer|unique:users,idcard,' . $id,
             'phone' => 'required|integer|unique:users,phone,' . $id,
             'password' => 'nullable|string|min:8|confirmed', // Contraseña opcional, con confirmación
+            'role_id' => 'required|integer|exists:roles,id',
+            'status' => 'required|boolean',
         ]);
 
         // Buscar el usuario por ID
@@ -83,6 +85,8 @@ class UsersController extends Controller
         $user->email = $validatedData['email'];
         $user->idcard = $validatedData['idcard'];
         $user->phone = $validatedData['phone'];
+        $user->role_id = $validatedData['role_id'];
+        $user->status = $validatedData['status'];
 
         // Actualizar la contraseña si se proporciona
         if ($request->filled('password')) {

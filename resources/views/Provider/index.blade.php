@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="text-center mb-5 display-4">Panel de Administración</h1>
+    <h1 class="text-center mb-5 display-4">Panel de Proveedor</h1>
 
     <div class="row">
         <!-- Panel de Gestión de Productos -->
@@ -10,25 +10,13 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h2 class="card-title h4">Gestión de Productos</h2>
-                    <p class="card-text">Administra los productos disponibles en la tienda.</p>
-                    <a href="{{ route('admin.products.index') }}" class="btn btn-success">Ver Productos</a>
-                    {{-- <a href="{{ route('products.create') }}" class="btn btn-success ml-2">Añadir Producto</a> --}}
+                    <p class="card-text">Administra los productos propios.</p>
+                    <a href="{{ route('products.index') }}" class="btn btn-success">Ver Productos</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-success ml-2">Añadir Producto</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Panel de Gestión de Usuarios -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h2 class="card-title h4">Gestión de Usuarios</h2>
-                    <p class="card-text">Administra los usuarios del sistema.</p>
-                    <a href="{{ route('users.index') }}" class="btn btn-success">Ver Usuarios</a>
-                    <a href="{{ route('users.create') }}" class="btn btn-success ml-2">Añadir Usuario</a>
-                </div>
-            </div>
-        </div>
-        
+
         <!-- Panel de Generación de Reportes -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm">

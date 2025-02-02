@@ -23,6 +23,7 @@ class Product extends Model
         'stock',
         'guarantee',
         'brand',
+        'provider_id',
         'size',
         'color',
         'image',
@@ -33,6 +34,11 @@ class Product extends Model
     public function saleProducts()
     {
         return $this->hasMany(InvoiceProduct::class);
+    }
+
+    public function provider()
+    {
+        return $this->belongsTo(User::class);
     }
 
     // Relación con el modelo Invoice a través de InvoiceProduct

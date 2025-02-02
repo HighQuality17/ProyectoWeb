@@ -31,13 +31,16 @@ class LoginController extends Controller
         // Redirigir según el rol del usuario
         if ($user->role_id == 1) {
             // Administrador
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.home');
         } elseif ($user->role_id == 2) {
             // Cliente
             return redirect()->route('profile.home');
+        }elseif ($user->role_id == 3) {
+            // Cliente
+            return redirect()->route('provider.home');
         }
 
         // Redirección predeterminada
-        return redirect()->route('index');
+        return redirect()->route('home');
     }
 }

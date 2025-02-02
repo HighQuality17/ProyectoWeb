@@ -7,6 +7,7 @@
             <h1>Agregar Producto</h1>
             <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="provider_id" value="{{ auth()->user()->id }}">
                 <div class="form-group">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" class="form-control" required>
@@ -54,8 +55,9 @@
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
             <br>
-            <a href="{{ route('admin.index') }}" class="btn btn-secondary mb-3">Volver al panel de gestión</a>
+            <a href="{{ route('provider.home') }}" class="btn btn-secondary mb-3">Volver al panel de gestión</a>
         </div>
     </div>
 </div>
 @endsection
+
