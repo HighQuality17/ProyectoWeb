@@ -62,8 +62,8 @@ https://templatemo.com/tm-559-zay-shop
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="/shop">Hombre</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Mujer</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['gender' => 'Hombre']) }}">Hombre</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['gender' => 'Mujer']) }}">Mujer</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
@@ -73,9 +73,9 @@ https://templatemo.com/tm-559-zay-shop
                         </a>
                         <ul id="collapseTwo" class="collapse list-unstyled pl-3">
                             
-                            <li><a class="text-decoration-none" href="/shop">Deportivo</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Casual</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Elegante</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Deportivo']) }}">Deportivo</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Casual']) }}">Casual</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['line' => 'Formal']) }}">Formal</a></li>
                     
                         </ul>
                     </li>
@@ -85,11 +85,11 @@ https://templatemo.com/tm-559-zay-shop
                             <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="/shop">Nike</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Adidas</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Rebook</a></li>
-                            <li><a class="text-decoration-none" href="/shop">New Balance</a></li>
-                            <li><a class="text-decoration-none" href="/shop">Skechers</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['brand' => 'Nike']) }}  ">Nike</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['brand' => 'Adidas']) }}">Adidas</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['brand' => 'Reebok']) }}">Rebook</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['brand' => 'New Balance']) }}">New Balance</a></li>
+                            <li><a class="text-decoration-none" href="{{ route('products.shopList', ['brand' => 'Skechers']) }}">Skechers</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -103,63 +103,57 @@ https://templatemo.com/tm-559-zay-shop
                                 <a class="h3 text-dark text-decoration-none mr-3" href="/shop">Todo</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="/shop">Hombres</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="{{ route('products.shopList', ['gender' => 'Hombre']) }}">Hombres</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="/shop">Mujeres</a>
+                                <a class="h3 text-dark text-decoration-none" href="{{ route('products.shopList', ['gender' => 'Mujer']) }}">Mujeres</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 pb-4">
                         <div class="d-flex">
-                            <select class="form-control">
-                                <option>Destacados</option>
-                                <option>Precio - menor a mayor</option>
-                                <option>Precio - mayor a menor</option>
-                            </select>
+                        <select class="form-control" onchange="location = this.value;">
+                            <option value="{{ route('products.shopList', array_merge(request()->query(), ['sort' => 'default'])) }}">Destacados</option>
+                            <option value="{{ route('products.shopList', array_merge(request()->query(), ['sort' => 'price_asc'])) }}">Precio - menor a mayor</option>
+                            <option value="{{ route('products.shopList', array_merge(request()->query(), ['sort' => 'price_desc'])) }}">Precio - mayor a menor</option>
+                        </select>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                @foreach($products as $product)
-    <div class="col-md-4">
-        <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-                <img class="card-img rounded-0 img-fluid" src="{{ asset('assets/img/' . $product->image) }}">
-                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                    <ul class="list-unstyled">
-                        <!-- ver producto -->
-                        <li><a class="btn btn-success text-white mt-2" href="{{route('products.show', $product->id)}}"><i class="far fa-eye"></i></a></li>
-                    </ul>
+                    @foreach($products as $product)
+                        <div class="col-md-4">
+                            <div class="card mb-4 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="{{ asset('assets/img/' . $product->image) }}" alt="{{ $product->name }}">
+                                    <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                        <ul class="list-unstyled">
+                                            <!-- Ver producto -->
+                                            <li><a class="btn btn-success text-white mt-2" href="{{ route('products.show', $product->id) }}"><i class="far fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <a href="{{ route('products.show', $product->id) }}" class="h3 text-decoration-none">{{ $product->name }}</a>
+                                    <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                        <li>Tallas:</li>
+                                        <li>{{ $product->size }}</li>
+                                        <li class="pt-2">
+                                            <span class="product-color-dot color-dot float-left rounded-circle ml-1">{{ $product->color }}</span>
+                                        </li>
+                                    </ul>
+                                    <p class="text-center mb-0">COP {{ number_format($product->price, 2) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-            </div>
-            <div class="card-body">
-                <a href="{{route('products.show', $product->id)}}" class="h3 text-decoration-none">{{ $product->name }}</a>
-                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                    <li>Tallas:</li>
-                    <li>{{ $product->size}}</li>
-                    <li class="pt-2">
-                        <span class="product-color-dot color-dot float-left rounded-circle ml-1">{{$product->color}}</span>
-                    </li>
-                </ul>
-                <p class="text-center mb-0">COP {{ $product->price }}</p>
-            </div>
-        </div>
-    </div>
-@endforeach
 
-            </div>
-                </div>
-                <div div="row">
-                    <ul class="pagination pagination-lg justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-                        </li>
-                       
-                    </ul>
+                <!-- Paginación -->
+                <div class="d-flex justify-content-center mt-4">
+                    {{ $products->links() }}
                 </div>
             </div>
-
         </div>
     </div>
     <!-- End Content -->

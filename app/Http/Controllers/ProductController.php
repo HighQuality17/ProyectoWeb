@@ -76,7 +76,6 @@ class ProductController extends Controller
     return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
     }
 
-
     public function show(string $id)
     {
         $product = Product::find($id);
@@ -145,9 +144,36 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
     }
-    public function shopList()
+    public function shopList(Request $request)
     {
-        $products = Product::all();
+        $query = Product::query();
+
+        // Filtrar por género
+        if ($request->has('gender')) {
+            $query->where('gender', $request->gender);
+        }
+
+        // Filtrar por tipo
+        if ($request->has('line')) {
+            $query->where('line', $request->line);
+        }
+
+        // Filtrar por marca
+        if ($request->has('brand')) {
+            $query->where('brand', $request->brand);
+        }
+
+        // Ordenamiento
+        if ($request->has('sort')) {
+            if ($request->sort == 'price_asc') {
+                $query->orderBy('price', 'asc');
+            } elseif ($request->sort == 'price_desc') {
+                $query->orderBy('price', 'desc');
+            }
+        }
+
+        $products = $query->paginate(12);
+        
         return view('shop', compact('products'));
     }
 }

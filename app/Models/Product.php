@@ -26,7 +26,8 @@ class Product extends Model
         'provider_id',
         'size',
         'color',
-        'image', // Agrega el campo 'image' al fillable
+        'image',
+        'gender',
     ];
 
     // Relación con el modelo SaleProduct

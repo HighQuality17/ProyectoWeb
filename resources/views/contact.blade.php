@@ -49,26 +49,24 @@
             <form class="col-md-9 m-auto" method="post" role="form" action="{{ route('contact.submit') }}">
                 @csrf
                 <div class="row">
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputname">Nombre</label>
-                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="inputname">Nombre</label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre" 
+                        required maxlength="255" pattern="[A-Za-zÀ-ÿ\s]+">
                     </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputemail">Email</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="inputsubject">Descripción</label>
-                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Descripción">
-                </div>
-                <div class="mb-3">
-                    <label for="inputmessage">Mensaje</label>
-                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensaje" rows="8"></textarea>
-                </div>
-                <div class="row">
-                    <div class="col text-end mt-2">
-                        <button type="submit" class="btn btn-success btn-lg px-3">Conversemos</button>
+                    <div class="mb-3">
+                        <label for="inputsubject">Descripción</label>
+                        <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Descripción" 
+                            required maxlength="255">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputmessage">Mensaje</label>
+                        <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensaje" 
+                                rows="8" required maxlength="5000"></textarea>
                     </div>
                 </div>
             </form>
