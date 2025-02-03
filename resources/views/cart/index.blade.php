@@ -42,7 +42,10 @@
                     <h4>Total: COP {{ number_format($cartItems->sum(fn($item) => $item->price * $item->quantity), 0, ',', '.') }}</h4>
                 </div>
                 <div class="col-md-3 text-end">
-                    <button class="btn btn-success btn-lg">Pagar</button>
+                    <form action="{{ route('sales.store') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-success btn-lg">Pagar</button>
+                    </form>
                 </div>
             </div>
         @else

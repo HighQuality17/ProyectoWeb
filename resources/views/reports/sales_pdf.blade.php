@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <div class="container mx-auto mt-8 p-6 bg-gray-100 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-gray-700 mb-6 text-center">Reporte de Ventas</h2>
 
@@ -29,4 +27,3 @@
         </div>
     @endif
 </div>
-@endsection

@@ -35,6 +35,30 @@ class SalesController extends Controller
         return view('sales.edit', compact('sale'));
     }
 
+    // Guardar una nueva venta
+    public function store(Request $request)
+    {
+        // Validar los datos enviados por el formulario
+        $request->validate([
+            'sale_date' => 'required|date',
+            'total_amount' => 'required|numeric',
+            'dispatch_date' => 'required|date',
+        ]);
+
+        // Crear una nueva venta para el usuario autenticado
+        $sale = new Sale();
+        $sale->user_id = Auth::user()->id;
+        $sale->sale_date = now();
+        $sale->created_at = now();
+        $sale->total_amount = $request->total_amount;
+        $sale->dispatch_date = now();
+        $sale->save();
+
+        // Redirigir a la vista de lista de ventas con un mensaje de éxito
+        return redirect()->route('sales.index')->with('success', 'Venta creada correctamente');
+    }
+
+
     // Actualizar los datos de una venta
     public function update(Request $request, $id)
     {

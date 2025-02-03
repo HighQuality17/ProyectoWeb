@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
         // Rutas RESTful para otros recursos
         Route::resources([
             'users'    => UsersController::class,
-            'sales'    => SalesController::class,
+            
         ]);
     });
 
@@ -58,7 +58,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/addresses/edit/{address}', [AddressController::class, 'edit'])->name('addresses.edit');
         Route::patch('/addresses/update/{address}', [AddressController::class, 'update'])->name('addresses.update');
         Route::delete('/addresses/destroy/{address}', [AddressController::class, 'destroy'])->name('addresses.destroy');
-        
+        Route::resources([
+            'sales'    => SalesController::class,
+        ]);
         //Rutas carrito de compras
 
         Route::get('/cart', [CartController::class, 'index'])->name('cart.index');  // Mostrar carrito

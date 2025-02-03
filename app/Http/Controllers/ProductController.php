@@ -47,6 +47,7 @@ class ProductController extends Controller
         'size' => 'required|numeric',
         'color' => 'required|string',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        //'gender' => 'required|string',
         ]);
 
     // Procesa la imagen
@@ -71,6 +72,7 @@ class ProductController extends Controller
     $product->color = $request->color;
     $product->provider_id = $request->provider_id;
     $product->image = $imageName;
+    $product->gender = "Hombre";
     $product->save();
 
     return redirect()->route('products.index')->with('success', 'Producto creado correctamente.');
