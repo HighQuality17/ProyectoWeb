@@ -20,6 +20,22 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
+
+    <style>
+        .review-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            background: #fff;
+        }
+        .review-box strong {
+            color: #333;
+        }
+        .review-box small {
+            color: #666;
+        }
+    </style>
 <!--
     
 TemplateMo 559 Zay Shop
@@ -180,6 +196,36 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
             </div>
+
+            <!-- Sección de Reseñas -->
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <h4>Reseñas de Clientes</h4>
+
+                    <!-- Formulario para agregar reseñas -->
+                    <form id="review-form">
+                        <div class="mb-3">
+                            <label for="reviewer-name" class="form-label">Tu Nombre</label>
+                            <input type="text" class="form-control" id="reviewer-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="review-text" class="form-label">Tu Reseña</label>
+                            <textarea class="form-control" id="review-text" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Enviar Reseña</button>
+                    </form>
+                </div>
+
+                <!-- Listado de Reseñas -->
+                <div class="col-lg-6">
+                    <h4>Reseñas Recientes</h4>
+                    <div id="reviews-container">
+                        <p class="text-muted">Aún no hay reseñas. ¡Sé el primero en comentar!</p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
     <!-- End Article -->
@@ -195,6 +241,45 @@ https://templatemo.com/tm-559-zay-shop
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('js/shop-single.js') }}"></script>
     <!-- End Script -->
+
+     <!-- Script para manejar las reseñas -->
+     <script>
+        document.getElementById("review-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita recargar la página
+
+            // Obtener valores del formulario
+            let name = document.getElementById("reviewer-name").value.trim();
+            let reviewText = document.getElementById("review-text").value.trim();
+            let reviewsContainer = document.getElementById("reviews-container");
+            let reviewCount = document.getElementById("review-count");
+
+            if (name === "" || reviewText === "") return; // Validar campos vacíos
+
+            // Crear un nuevo elemento de reseña
+            let reviewDiv = document.createElement("div");
+            reviewDiv.classList.add("review-box");
+
+            let reviewContent = `
+                <strong>${name}</strong> <small>(hace un momento)</small>
+                <p>${reviewText}</p>
+            `;
+
+            reviewDiv.innerHTML = reviewContent;
+
+            // Agregar la reseña al contenedor
+            if (reviewsContainer.querySelector("p.text-muted")) {
+                reviewsContainer.innerHTML = ""; // Remover mensaje "Aún no hay reseñas"
+            }
+
+            reviewsContainer.prepend(reviewDiv); // Agregar la reseña arriba de las anteriores
+
+            // Actualizar contador de reseñas
+            reviewCount.textContent = parseInt(reviewCount.textContent) + 1;
+
+            // Limpiar formulario
+            document.getElementById("review-form").reset();
+        });
+    </script>
 
     <!-- Start Slider Script -->
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
