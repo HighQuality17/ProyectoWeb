@@ -67,10 +67,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Línea</th>
-                <th>Talla</th>
                 <th>Marca</th>
-                <th>Color</th>
-                <th>Garantía</th>
                 <th>Stock</th>
                 <th>Precio</th>
             </tr>
@@ -80,10 +77,7 @@
             <tr>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->line }}</td>
-                <td>{{ $product->size }}</td>
                 <td>{{ $product->brand }}</td>
-                <td>{{ $product->color }}</td>
-                <td>{{ $product->guarantee }}</td>
                 <td>{{ $product->stock }}</td>
                 <td>{{ $product->price }}</td>
             </tr>
