@@ -166,6 +166,9 @@ https://templatemo.com/tm-559-zay-shop
                                             <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
                                         </ul>
                                     </div>
+                                   
+                                <div class="col-auto">
+                                    <a href="{{ route('RA') }}" class="btn btn-info">Ver en RA</a>
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">

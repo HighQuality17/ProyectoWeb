@@ -111,4 +111,6 @@ Route::get('/shop-single/{id}', [ProductController::class, 'show'])->name('produ
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
 Route::view('/contact', 'contact')->name('contact');
+Route::view('/ra', 'ra-show')->name('RA');
