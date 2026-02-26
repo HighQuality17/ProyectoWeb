@@ -1,5 +1,5 @@
 Autores:
-Joni Alexander Cuartas Pineda
+Joni Alexander Cuartas Pineda,
 Veronica Rendon Florez
 
 Contribuidores:
